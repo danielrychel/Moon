@@ -5,19 +5,27 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float maxSpeed;
+    public Transform gunPivot;
+    public Transform gun;
+
+    public Transform bullet;
 
     private Rigidbody2D rb2d;
-
-    // Start is called before the first frame update
-    void Start()
-    {
+    
+    void Start() {
         rb2d = GetComponent<Rigidbody2D>();
     }
+    
+    void Update() {
+        // rotate gun
+        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mouseDelta = mouseWorld - gunPivot.position;
+        float angle = Mathf.Atan2(mouseDelta.y, mouseDelta.x) * 180 / Mathf.PI;
+        gunPivot.rotation = Quaternion.Euler(0, 0, angle);
 
-    // Update is called once per frame
-    void Update()
-    {
-
+        if(Input.GetButtonDown("Fire1")) {
+            Instantiate(bullet, gun.position, gun.rotation);
+        }
     }
 
     void FixedUpdate()
