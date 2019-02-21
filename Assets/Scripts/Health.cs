@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     public float MaxHP;
     private float RemainingHP;
+    public Rigidbody2D rb2d;
 
     public bool alive = true;
 

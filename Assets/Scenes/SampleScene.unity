@@ -444,7 +444,7 @@ GameObject:
   - component: {fileID: 870083697}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Killable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -571,6 +571,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 3
+  hp: {fileID: 870083697}
+  player: {fileID: 1296306382}
 --- !u!114 &870083697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,7 +585,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d13897fa7c5b8499ca18e6e631f153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 3
+  MaxHP: 5
+  rb2d: {fileID: 870083695}
   alive: 1
 --- !u!1 &1227306490
 GameObject:
@@ -789,6 +792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHP: 5
+  rb2d: {fileID: 1296306382}
   alive: 1
 --- !u!114 &1296306381
 MonoBehaviour:

@@ -21,11 +21,11 @@ public class BulletController : MonoBehaviour
     {
         if (collision.tag != "Player")
         {
-            Destroy(transform.parent.gameObject);
             if (collision.tag == "Killable")
             {
                 collision.gameObject.GetComponent<Health>().takeDamage(dmg);
             }
+            Destroy(transform.parent.gameObject);
         }
     }
 }
