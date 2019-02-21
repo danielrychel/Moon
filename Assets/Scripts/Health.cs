@@ -5,7 +5,7 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     public float MaxHP;
-    public float RemainingHP;
+    private float RemainingHP;
 
     public bool alive = true;
 
