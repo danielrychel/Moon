@@ -44,7 +44,11 @@ public class DashAbility : MonoBehaviour
                 dashTime += Time.deltaTime * 9;
                 if (!gotDir)
                 {
-                    tempV = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+//                    tempV = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+                    Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    Vector2 vDir = mouseWorld - rb2d.transform.position;
+                    tempV = new Vector2(vDir.x, vDir.y);
+                    tempV.Normalize();
                     gotDir = true;
                 }
                 switch (frame)
@@ -56,6 +60,7 @@ public class DashAbility : MonoBehaviour
                     case Frames.PreDash:
 
                         rb2d.velocity = tempV * 60;
+
                         rb2d.gameObject.GetComponent<Collider2D>().isTrigger = true;
                         frame = Frames.Damage;
                         break;
