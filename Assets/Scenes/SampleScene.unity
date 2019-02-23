@@ -573,6 +573,7 @@ MonoBehaviour:
   maxSpeed: 3
   hp: {fileID: 870083697}
   player: {fileID: 1296306382}
+  corpse: {fileID: 6183641266302782330, guid: e322ecdc5b59ff54da8f9b1bb3cfd455, type: 3}
 --- !u!114 &870083697
 MonoBehaviour:
   m_ObjectHideFlags: 0
