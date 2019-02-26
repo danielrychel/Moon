@@ -61,5 +61,10 @@ public class PlayerController : MonoBehaviour
             rb2d.gameObject.GetComponent<Health>().takeDamage(colDmg);
             // Take damage if contact in vulnerable 
         }
+        else if (collision.tag == "teleporter")
+        {
+            transform.position = new Vector3(0f, -1.5f, 0.0f);
+        
+        }
     }
 }
