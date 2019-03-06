@@ -7,8 +7,6 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed;
     public Transform gunPivot;
     public Transform gun;
-    public DashAbility dashLogic;
-    public Health hp;
 
     public float swordDmg, colDmg;
 
@@ -16,10 +14,11 @@ public class PlayerController : MonoBehaviour
     public Transform bullet;
 
     private Rigidbody2D rb2d;
+    private DashAbility dashLogic;
 
-    void Start()
-    {
+    void Start() {
         rb2d = GetComponent<Rigidbody2D>();
+        dashLogic = GetComponent<DashAbility>();
     }
 
     void Update()
@@ -58,7 +57,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (collision.tag == "Killable")
         {
-            rb2d.gameObject.GetComponent<Health>().takeDamage(colDmg);
+            GetComponent<Health>().takeDamage(colDmg);
             // Take damage if contact in vulnerable 
         }
         else if (collision.tag == "teleporter")
