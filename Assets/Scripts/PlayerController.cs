@@ -8,6 +8,9 @@ public class PlayerController : MonoBehaviour
     public Transform gunPivot;
     public Transform gun;
 
+    public float camDistance;
+    public Transform cam;
+
     public float swordDmg, colDmg;
 
 
@@ -26,8 +29,12 @@ public class PlayerController : MonoBehaviour
         // rotate gun
         Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 mouseDelta = mouseWorld - gunPivot.position;
-        float angle = Mathf.Atan2(mouseDelta.y, mouseDelta.x) * 180 / Mathf.PI;
-        gunPivot.rotation = Quaternion.Euler(0, 0, angle);
+        float angle = Mathf.Atan2(mouseDelta.y, mouseDelta.x);
+        gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI);
+
+        // translate camera
+        Vector3 camTarget = new Vector3(camDistance*Mathf.Cos(angle), camDistance*Mathf.Sin(angle), -10);
+        cam.localPosition = Vector3.Lerp(cam.localPosition, camTarget, 0.1f);
 
         if (Input.GetButtonDown("Fire1"))
         {
