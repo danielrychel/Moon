@@ -7,6 +7,8 @@ TagManager:
   - Killable
   - Cover
   - teleporter
+  - PlayerBullet
+  - EnemyBullet
   layers:
   - Default
   - TransparentFX

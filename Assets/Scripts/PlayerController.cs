@@ -38,7 +38,8 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            Instantiate(bullet, gun.position, gun.rotation);
+            var shoot = Instantiate(bullet, gun.position, gun.rotation);
+            shoot.tag = "PlayerBullet";
         }
     }
 
