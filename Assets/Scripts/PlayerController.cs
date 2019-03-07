@@ -7,11 +7,14 @@ public class PlayerController : MonoBehaviour
     public float maxSpeed;
     public Transform gunPivot;
     public Transform gun;
+    public Transform corpse;
 
     public float camDistance;
     public Transform cam;
 
     public float swordDmg, colDmg;
+
+    public Health hp;
 
 
     public Transform bullet;
@@ -50,6 +53,11 @@ public class PlayerController : MonoBehaviour
             float vSpeed = Input.GetAxis("Vertical");
             Vector2 v = new Vector2(hSpeed, vSpeed);
             rb2d.velocity = v * maxSpeed;
+        }
+        if (!hp.alive)
+        {
+            Instantiate(corpse, new Vector3(rb2d.gameObject.transform.position.x + 1f, rb2d.gameObject.transform.position.y - 0.7f, rb2d.gameObject.transform.position.z), Quaternion.identity);
+            Destroy(rb2d.gameObject);
         }
     }
 
