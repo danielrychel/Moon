@@ -14,6 +14,7 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        player = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
     }
 
     void Update()
