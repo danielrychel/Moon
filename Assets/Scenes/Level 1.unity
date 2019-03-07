@@ -27504,30 +27504,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1055210780 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 988374602731329589, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
-    type: 3}
-  m_PrefabInstance: {fileID: 988374602284836137}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a35f8284ab2b45409ade95fcf7cbfa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1055210781 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 988374602731329588, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
-    type: 3}
-  m_PrefabInstance: {fileID: 988374602284836137}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 39d13897fa7c5b8499ca18e6e631f153, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1055359289
 GameObject:
   m_ObjectHideFlags: 0
@@ -38382,12 +38358,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!4 &1466841775 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 988374602624477086, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
-    type: 3}
-  m_PrefabInstance: {fileID: 988374602284836137}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1467122943
 GameObject:
   m_ObjectHideFlags: 0
@@ -58371,26 +58341,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 988374602731329547, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
-        type: 3}
-      propertyPath: dashLogic
-      value: 
-      objectReference: {fileID: 1055210780}
-    - target: {fileID: 988374602731329547, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
-        type: 3}
-      propertyPath: hp
-      value: 
-      objectReference: {fileID: 1055210781}
-    - target: {fileID: 988374602731329547, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
-        type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 1466841775}
-    - target: {fileID: 988374602731329547, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
-        type: 3}
-      propertyPath: camDistance
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}

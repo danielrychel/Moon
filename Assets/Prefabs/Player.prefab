@@ -273,8 +273,8 @@ MonoBehaviour:
   maxSpeed: 10
   gunPivot: {fileID: 988374602421172176}
   gun: {fileID: 988374601260895697}
-  dashLogic: {fileID: 0}
-  hp: {fileID: 0}
+  camDistance: 2
+  cam: {fileID: 988374602624477086}
   swordDmg: 3
   colDmg: 1
   bullet: {fileID: 3286294735871222309, guid: 0cf6bbfc1cae1b3408a9bbd3d51c091e, type: 3}
