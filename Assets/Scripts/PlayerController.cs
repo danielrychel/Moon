@@ -30,24 +30,27 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // rotate gun
-        Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        Vector2 mouseDelta = mouseWorld - gunPivot.position;
-        float angle = Mathf.Atan2(mouseDelta.y, mouseDelta.x);
-        gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI);
-
-        // translate camera
-        Vector3 camTarget = new Vector3(camDistance*Mathf.Cos(angle), camDistance*Mathf.Sin(angle), -10);
-        cam.localPosition = Vector3.Lerp(cam.localPosition, camTarget, 0.1f);
-
-        if (Input.GetButtonDown("Fire1"))
+        if (hp.alive)
         {
-            Instantiate(bullet, gun.position, gun.rotation);
+            Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mouseDelta = mouseWorld - gunPivot.position;
+            float angle = Mathf.Atan2(mouseDelta.y, mouseDelta.x);
+            gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI);
+
+            // translate camera
+            Vector3 camTarget = new Vector3(camDistance * Mathf.Cos(angle), camDistance * Mathf.Sin(angle), -10);
+            cam.localPosition = Vector3.Lerp(cam.localPosition, camTarget, 0.1f);
+
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Instantiate(bullet, gun.position, gun.rotation);
+            }
         }
     }
 
     void FixedUpdate()
     {
-        if (!dashLogic.dashing)
+        if (!dashLogic.dashing && hp.alive)
         {
             float hSpeed = Input.GetAxis("Horizontal");
             float vSpeed = Input.GetAxis("Vertical");
@@ -56,29 +59,33 @@ public class PlayerController : MonoBehaviour
         }
         if (!hp.alive)
         {
-            Instantiate(corpse, new Vector3(rb2d.gameObject.transform.position.x + 1f, rb2d.gameObject.transform.position.y - 0.7f, rb2d.gameObject.transform.position.z), Quaternion.identity);
-            Destroy(rb2d.gameObject);
+            GetComponent<SpriteRenderer>().sprite = corpse.gameObject.GetComponent<SpriteRenderer>().sprite;
+            //           Instantiate(corpse, new Vector3(rb2d.gameObject.transform.position.x + 1f, rb2d.gameObject.transform.position.y - 0.7f, rb2d.gameObject.transform.position.z), Quaternion.identity);
+            //   Die.exe;
         }
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collision detected");
-        if (collision.tag == "Killable" && dashLogic.frame == DashAbility.Frames.Damage)
+        if (hp.alive)
         {
-            if (collision.gameObject.GetComponent<Health>().takeDamage(swordDmg))
-                dashLogic.setKilled();
-            Debug.Log("Contact");
-        }
-        else if (collision.tag == "Killable")
-        {
-            GetComponent<Health>().takeDamage(colDmg);
-            // Take damage if contact in vulnerable 
-        }
-        else if (collision.tag == "teleporter")
-        {
-            transform.position = new Vector3(0f, -1.5f, 0.0f);
-        
+            Debug.Log("Collision detected");
+            if (collision.tag == "Killable" && dashLogic.frame == DashAbility.Frames.Damage)
+            {
+                if (collision.gameObject.GetComponent<Health>().takeDamage(swordDmg))
+                    dashLogic.setKilled();
+                Debug.Log("Contact");
+            }
+            else if (collision.tag == "Killable")
+            {
+                GetComponent<Health>().takeDamage(colDmg);
+                // Take damage if contact in vulnerable 
+            }
+            else if (collision.tag == "teleporter")
+            {
+                transform.position = new Vector3(0f, -1.5f, 0.0f);
+
+            }
         }
     }
 }
