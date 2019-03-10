@@ -19,7 +19,7 @@ public class BulletController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag != "Player")
+        if (collision.tag != "Player" && collision.tag != "Ethereal")
         {
             if (collision.tag == "Killable")
             {
