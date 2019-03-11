@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Switch : MonoBehaviour
+public class lazer_doors : MonoBehaviour
 {
     public door_control controller;
     // Start is called before the first frame update
@@ -14,7 +14,8 @@ public class Switch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (controller.switched) {
+        if (controller.switched)
+        {
             Destroy(gameObject);
         }
     }
