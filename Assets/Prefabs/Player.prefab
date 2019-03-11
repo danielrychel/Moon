@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 988374602731329588}
   - component: {fileID: 988374602731329589}
   - component: {fileID: 988374602731329586}
+  - component: {fileID: 5161006290854518575}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -414,6 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHP: 5
+  RemainingHP: 0
   rb2d: {fileID: 988374602731329544}
   alive: 1
 --- !u!114 &988374602731329589
@@ -451,3 +453,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261e70028b84cd646a899670c824f11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5161006290854518575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988374602731329599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c50dd7723b544e12a9cd977211d2595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: {fileID: 988374602731329588}
+  current_hp: {fileID: 0}
