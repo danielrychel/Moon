@@ -61,6 +61,9 @@ TagManager:
   - name: Entity
     uniqueID: 2884252977
     locked: 0
+  - name: Player
+    uniqueID: 2683409933
+    locked: 0
   - name: Heavens
     uniqueID: 4066003555
     locked: 0
