@@ -9,6 +9,9 @@ TagManager:
   - teleporter
   - Wall
   - Floor
+  - Ethereal
+  - EnemyAttack
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX
