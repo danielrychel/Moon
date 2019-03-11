@@ -53,7 +53,7 @@ public class EnemyController : MonoBehaviour
                         rb2d.velocity = enemy_to_player * maxSpeed;
                     }
                     time += 1;
-                    if (time > 30)
+                    if (time > 50)
                     {
                         time = 0;
                         var shooting = Instantiate(bullet, gun.position, gun.rotation);
