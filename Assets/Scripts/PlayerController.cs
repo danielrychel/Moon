@@ -81,9 +81,9 @@ public class PlayerController : MonoBehaviour
                 GetComponent<Health>().takeDamage(colDmg);
                 // Take damage if contact in vulnerable 
             }
-            else if (collision.tag == "teleporter")
+            else if (collision.tag == "interact")
             {
-                transform.position = new Vector3(0f, -1.5f, 0.0f);
+
 
             }
         }

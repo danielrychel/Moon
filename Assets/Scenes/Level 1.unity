@@ -9866,6 +9866,80 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2074463796}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &398848877
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1384171159}
+    m_Modifications:
+    - target: {fileID: 7576942333253389297, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_Name
+      value: prison_side (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389298, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -10.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389298, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389298, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389298, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389298, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389298, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389298, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389298, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389298, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389298, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389298, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389298, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ad762198b03054ddbb0d3ee489bebba9, type: 3}
 --- !u!1001 &399990790
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14891,6 +14965,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4925001517059558124, guid: 1dfd42a5414d24a83a39b5e1e3f21acf,
     type: 3}
   m_PrefabInstance: {fileID: 596494375}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &598999083 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7576942333253389298, guid: ad762198b03054ddbb0d3ee489bebba9,
+    type: 3}
+  m_PrefabInstance: {fileID: 398848877}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &603574208 stripped
 Transform:
@@ -33420,6 +33500,7 @@ Transform:
   - {fileID: 1123376142}
   - {fileID: 1934229965}
   - {fileID: 1108686421}
+  - {fileID: 598999083}
   m_Father: {fileID: 1747781204}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34358,6 +34439,11 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 988374602731329588, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+        type: 3}
+      propertyPath: current_hp
+      value: 
+      objectReference: {fileID: 856310203}
+    - target: {fileID: 5161006290854518575, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
         type: 3}
       propertyPath: current_hp
       value: 
