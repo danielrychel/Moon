@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using Pathfinding;
+
 public class EnemyController : MonoBehaviour
 {
     public float maxSpeed;
@@ -12,18 +14,40 @@ public class EnemyController : MonoBehaviour
     public Transform gunPivot;
     public Transform gun;
 
+    public Transform playerGhost;
+    public TargetReached targetReached;
+
+    public AIDestinationSetter moveTo;
+
     private Rigidbody2D rb2d;
     private Rigidbody2D player;
 
-    private float agroDistance = 20;
-    private bool agroed = false;
+    private Vector2 LastPlayerPos;
+
+    private float agroDistance = 15;
+    private float alertDistance = 20;
+
     private float time = 15;
 
-    
+    public RoutineController routine;
+
+    public Transform[] PatrolRoute;
+    private int patrolState;
+
+    public int PatrolSize;
+    private bool markPlayer;
+
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
+        routine.SetPatrol();
+        patrolState = 0;
+        if (PatrolSize > 0)
+        {
+            SetMoveTo(PatrolRoute[0]);
+            targetReached.SetNextTarget(PatrolRoute[1]);
+        }
     }
 
     void Update()
@@ -39,18 +63,48 @@ public class EnemyController : MonoBehaviour
             Vector2 player_vec = new Vector2(player.transform.position.x, player.transform.position.y);
             Vector2 enemy_to_player = player_vec - enemy_vec;
             float distance = Mathf.Abs(Vector2.Distance(enemy_vec, player_vec));
-            if (agroed || distance < agroDistance)
+            RaycastHit2D see = Physics2D.Linecast(enemy_vec, player_vec); //check if the enemy can see the player
+            if (routine.GetPatrol())
+            {
+                if(PatrolSize > 0 && targetReached.SetNextTarget(PatrolRoute[patrolState])) patrolState = (patrolState + 1) % PatrolSize;
+            }
+            if (routine.GetAlert() || distance < alertDistance)
+            {
+                routine.SetAlert();
+                float angle = Mathf.Atan2(enemy_to_player.y, enemy_to_player.x);
+                gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI); //aim gun at player
+                if (see.transform.tag == "Player")
+                {
+                    LastPlayerPos = player_vec;
+                    markPlayer = true;
+                    playerGhost.position = new Vector3(LastPlayerPos.x, LastPlayerPos.y, 0);
+                }
+                else if (markPlayer)
+                {
+                    SetMoveTo(playerGhost);
+                    markPlayer = false;
+                }
+                else
+                {
+                    routine.SetForget();
+                    markPlayer = false;
+                }
+
+            }
+
+            if (routine.GetAggro() || distance < agroDistance)
             {
                 float angle = Mathf.Atan2(enemy_to_player.y, enemy_to_player.x);
                 gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI); //aim gun at player
                 RaycastHit2D hit = Physics2D.Linecast(gun.position, player_vec); //check if the enemy can see the player
                 if (hit.transform.tag == "Player") //If it can see the player, then shoot at it 
                 {
-                    agroed = true;
+                    routine.SetAggro();
                     if (distance > 3)
                     {
                         enemy_to_player.Normalize();
-                        rb2d.velocity = enemy_to_player * maxSpeed;
+                        SetMoveTo(player.transform);
+                        //                       rb2d.velocity = enemy_to_player * maxSpeed;
                     }
                     time += 1;
                     if (time > 50)
@@ -67,5 +121,10 @@ public class EnemyController : MonoBehaviour
             Instantiate(corpse, new Vector3(rb2d.gameObject.transform.position.x + 1f, rb2d.gameObject.transform.position.y - 0.7f, rb2d.gameObject.transform.position.z), Quaternion.identity);
             Destroy(rb2d.gameObject);
         }
+    }
+
+    private void SetMoveTo(Transform target)
+    {
+        if (moveTo.target != target) moveTo.target = target;
     }
 }
