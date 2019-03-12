@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7576942333253389298}
   - component: {fileID: 7576942333253389299}
   - component: {fileID: 7576942333253389300}
+  - component: {fileID: 1344749875527127576}
   m_Layer: 0
   m_Name: prison_side
   m_TagString: Wall
@@ -106,3 +107,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5275879, y: 2}
   m_EdgeRadius: 0
+--- !u!114 &1344749875527127576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7576942333253389297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 261e70028b84cd646a899670c824f11d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
