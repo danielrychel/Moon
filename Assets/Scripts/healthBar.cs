@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class healthBar : MonoBehaviour
 {
@@ -22,5 +23,9 @@ public class healthBar : MonoBehaviour
     {
         float damage_ratio = hp.RemainingHP / hp.MaxHP;
         current_hp.rectTransform.localScale = new Vector3(damage_ratio, 1, 1);
+        if(hp.RemainingHP <= 0) {
+            Scene thisScene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(thisScene.name);
+        }
     }
 }
