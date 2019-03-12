@@ -277,7 +277,7 @@ MonoBehaviour:
   corpse: {fileID: 8729596025865877029, guid: 7b9547a3e8b96ed42893daba70602b10, type: 3}
   camDistance: 2
   cam: {fileID: 988374602624477086}
-  swordDmg: 3
+  swordDmg: 2
   colDmg: 1
   hp: {fileID: 988374602731329588}
   bullet: {fileID: 3286294735871222309, guid: 0cf6bbfc1cae1b3408a9bbd3d51c091e, type: 3}

@@ -22,6 +22,11 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
     private DashAbility dashLogic;
 
+    public enum ActState
+    {
+        Fire, Dash, Run
+    }
+
     void Start() {
         rb2d = GetComponent<Rigidbody2D>();
         dashLogic = GetComponent<DashAbility>();
