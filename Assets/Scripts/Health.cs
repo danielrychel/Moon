@@ -23,6 +23,7 @@ public class Health : MonoBehaviour
         {
             alive = false;
             Debug.Log("Killed!");
+
             return true;
         }
         Debug.Log("Damage!");

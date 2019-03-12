@@ -8,6 +8,12 @@ public class PlayerController : MonoBehaviour
     public Transform gunPivot;
     public Transform gun;
     public Transform corpse;
+    public GameObject gunGameObject;
+
+    public Sprite shotgun;
+    public Sprite pistol;
+    private string[] guns = new string[2];
+    int currentGun = 0;
 
     public float camDistance;
     public Transform cam;
@@ -32,6 +38,13 @@ public class PlayerController : MonoBehaviour
     void Start() {
         rb2d = GetComponent<Rigidbody2D>();
         dashLogic = GetComponent<DashAbility>();
+        gunGameObject = gun.gameObject;
+        shotgun = Resources.Load<Sprite>("shotgun") as Sprite;
+        pistol = Resources.Load<Sprite>("gun") as Sprite;
+        guns[0] = "pistol";
+        guns[1] = "shotgun";
+
+
     }
 
     void Update()
@@ -50,8 +63,38 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetButtonDown("Fire1"))
             {
-                var shooting = Instantiate(bullet, gun.position, gun.rotation);
-                shooting.tag = "PlayerAttack";
+                switch(guns[currentGun]){
+                    case "pistol":
+                        shootBullet(bullet, gun.position, gun.rotation);
+                        break;
+                    case "shotgun":
+                        Quaternion bullet2Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z+10);
+                        Quaternion bullet3Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z - 10);
+                        shootBullet(bullet, gun.position, bullet2Rotation);
+                        shootBullet(bullet, gun.position, bullet3Rotation);
+                        shootBullet(bullet, gun.position, gun.rotation);
+                        break;
+                    default:
+                        shootBullet(bullet, gun.position, gun.rotation);
+                        break;
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q)){
+
+                currentGun = (currentGun + 1) % guns.Length; 
+                switch(guns[currentGun]){
+                    case "pistol":
+                        gunGameObject.GetComponent<SpriteRenderer>().sprite = pistol;
+                        break;
+                    case "shotgun":
+                        gunGameObject.GetComponent<SpriteRenderer>().sprite = shotgun;
+                        break;
+                    default: 
+                        gunGameObject.GetComponent<SpriteRenderer>().sprite = pistol;
+                        break;
+
+                }
             }
         }
     }
@@ -107,5 +150,10 @@ public class PlayerController : MonoBehaviour
 
             }
         }
+    }
+
+    void shootBullet(Transform bulletType, Vector3 position, Quaternion rotation){
+        var shooting = Instantiate(bulletType, position, rotation);
+        shooting.tag = "PlayerAttack";
     }
 }

@@ -315,8 +315,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1410714319
-  m_SortingLayer: 3
+  m_SortingLayerID: -228963741
+  m_SortingLayer: 5
   m_SortingOrder: 787
   m_Sprite: {fileID: 21300000, guid: 1c3b0ea8efd8cb847aaf757a9002fc82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -525,6 +525,9 @@ MonoBehaviour:
   gunPivot: {fileID: 988374602421172176}
   gun: {fileID: 988374601260895697}
   corpse: {fileID: 8729596025865877029, guid: 7b9547a3e8b96ed42893daba70602b10, type: 3}
+  gunGameObject: {fileID: 0}
+  shotgun: {fileID: 0}
+  pistol: {fileID: 0}
   camDistance: 2
   cam: {fileID: 988374602624477086}
   swordDmg: 2
@@ -587,8 +590,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1410714319
-  m_SortingLayer: 3
+  m_SortingLayerID: -1611557363
+  m_SortingLayer: 4
   m_SortingOrder: 887
   m_Sprite: {fileID: 21300000, guid: 3ed5aee75b60b6142b1ad66aeb01af48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
