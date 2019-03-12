@@ -48,7 +48,8 @@ public class PlayerController : MonoBehaviour
 
             if (Input.GetButtonDown("Fire1"))
             {
-                Instantiate(bullet, gun.position, gun.rotation);
+                var shooting = Instantiate(bullet, gun.position, gun.rotation);
+                shooting.tag = "PlayerAttack";
             }
         }
     }
@@ -86,9 +87,9 @@ public class PlayerController : MonoBehaviour
                 GetComponent<Health>().takeDamage(colDmg);
                 // Take damage if contact in vulnerable 
             }
-            else if (collision.tag == "teleporter")
+            else if (collision.tag == "interact")
             {
-                transform.position = new Vector3(0f, -1.5f, 0.0f);
+
 
             }
         }

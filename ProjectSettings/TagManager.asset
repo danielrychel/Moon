@@ -9,6 +9,9 @@ TagManager:
   - teleporter
   - Wall
   - Floor
+  - Ethereal
+  - EnemyAttack
+  - PlayerAttack
   layers:
   - Default
   - TransparentFX
@@ -57,6 +60,9 @@ TagManager:
     locked: 0
   - name: Entity
     uniqueID: 2884252977
+    locked: 0
+  - name: Player
+    uniqueID: 2683409933
     locked: 0
   - name: Heavens
     uniqueID: 4066003555
