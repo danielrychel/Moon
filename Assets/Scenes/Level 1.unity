@@ -19266,8 +19266,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1382375634}
-  - {fileID: 1052384272}
   - {fileID: 1210464379}
+  - {fileID: 1052384272}
   m_Father: {fileID: 1968971688}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -34752,6 +34752,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 988374602731329588, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+        type: 3}
+      propertyPath: alive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988374602731329588, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 988374602731329588, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+        type: 3}
+      propertyPath: current_hp
+      value: 
+      objectReference: {fileID: 856310203}
     - target: {fileID: 988374602731329546, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -34807,26 +34822,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 988374602731329588, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+    - target: {fileID: 988374602731329547, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
         type: 3}
-      propertyPath: alive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 988374602731329588, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 988374602731329588, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
-        type: 3}
-      propertyPath: current_hp
+      propertyPath: gunGameObject
       value: 
-      objectReference: {fileID: 856310203}
-    - target: {fileID: 5161006290854518575, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
-        type: 3}
-      propertyPath: current_hp
-      value: 
-      objectReference: {fileID: 856310203}
+      objectReference: {fileID: 0}
     - target: {fileID: 988374602731329545, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -34837,6 +34837,11 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5161006290854518575, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+        type: 3}
+      propertyPath: current_hp
+      value: 
+      objectReference: {fileID: 856310203}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
 --- !u!1001 &1423503521
@@ -39476,6 +39481,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 617790196}
     m_Modifications:
+    - target: {fileID: 3776914371877106716, guid: 6c437dfef580f420aaca734af9d860c3,
+        type: 3}
+      propertyPath: m_Name
+      value: electric
+      objectReference: {fileID: 0}
     - target: {fileID: 2730255001103494643, guid: 6c437dfef580f420aaca734af9d860c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39536,11 +39546,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2016614556}
-    - target: {fileID: 3776914371877106716, guid: 6c437dfef580f420aaca734af9d860c3,
-        type: 3}
-      propertyPath: m_Name
-      value: electric
-      objectReference: {fileID: 0}
     - target: {fileID: 6472085138307913110, guid: 6c437dfef580f420aaca734af9d860c3,
         type: 3}
       propertyPath: m_FlipX
@@ -46555,6 +46560,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 757466380}
     m_Modifications:
+    - target: {fileID: 2517841533233887380, guid: db8f8ec003c0241459c98f7c2a667aa0,
+        type: 3}
+      propertyPath: m_Name
+      value: lazer (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 2517841533233887383, guid: db8f8ec003c0241459c98f7c2a667aa0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -46614,11 +46624,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 0.39999998
-      objectReference: {fileID: 0}
-    - target: {fileID: 2517841533233887380, guid: db8f8ec003c0241459c98f7c2a667aa0,
-        type: 3}
-      propertyPath: m_Name
-      value: lazer (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2517841533233887382, guid: db8f8ec003c0241459c98f7c2a667aa0,
         type: 3}
@@ -51183,6 +51188,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 617790196}
     m_Modifications:
+    - target: {fileID: 2389758992070724335, guid: de467460373804aed893996c170a0860,
+        type: 3}
+      propertyPath: m_Name
+      value: chair
+      objectReference: {fileID: 0}
     - target: {fileID: 2389758992070724334, guid: de467460373804aed893996c170a0860,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -51237,11 +51247,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2389758992070724335, guid: de467460373804aed893996c170a0860,
-        type: 3}
-      propertyPath: m_Name
-      value: chair
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: de467460373804aed893996c170a0860, type: 3}
@@ -51321,6 +51326,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 73913886}
     m_Modifications:
+    - target: {fileID: 2517841533233887380, guid: db8f8ec003c0241459c98f7c2a667aa0,
+        type: 3}
+      propertyPath: m_Name
+      value: lazer
+      objectReference: {fileID: 0}
     - target: {fileID: 2517841533233887383, guid: db8f8ec003c0241459c98f7c2a667aa0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -51375,11 +51385,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2517841533233887380, guid: db8f8ec003c0241459c98f7c2a667aa0,
-        type: 3}
-      propertyPath: m_Name
-      value: lazer
       objectReference: {fileID: 0}
     - target: {fileID: 2517841533233887382, guid: db8f8ec003c0241459c98f7c2a667aa0,
         type: 3}
