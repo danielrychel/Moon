@@ -68,7 +68,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1410714319
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 787
   m_Sprite: {fileID: 21300000, guid: 1c3b0ea8efd8cb847aaf757a9002fc82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -178,7 +178,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -235,6 +235,7 @@ GameObject:
   - component: {fileID: 988374602731329588}
   - component: {fileID: 988374602731329589}
   - component: {fileID: 988374602731329586}
+  - component: {fileID: 5161006290854518575}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -273,10 +274,12 @@ MonoBehaviour:
   maxSpeed: 10
   gunPivot: {fileID: 988374602421172176}
   gun: {fileID: 988374601260895697}
-  dashLogic: {fileID: 0}
-  hp: {fileID: 0}
+  corpse: {fileID: 8729596025865877029, guid: 7b9547a3e8b96ed42893daba70602b10, type: 3}
+  camDistance: 2
+  cam: {fileID: 988374602624477086}
   swordDmg: 3
   colDmg: 1
+  hp: {fileID: 988374602731329588}
   bullet: {fileID: 3286294735871222309, guid: 0cf6bbfc1cae1b3408a9bbd3d51c091e, type: 3}
 --- !u!50 &988374602731329544
 Rigidbody2D:
@@ -333,8 +336,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1410714319
-  m_SortingLayer: 2
+  m_SortingLayerID: -1611557363
+  m_SortingLayer: 4
   m_SortingOrder: 887
   m_Sprite: {fileID: 21300000, guid: 271bc0a7efb264a40abaca7ece2ee188, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -412,6 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHP: 5
+  RemainingHP: 0
   rb2d: {fileID: 988374602731329544}
   alive: 1
 --- !u!114 &988374602731329589
@@ -449,3 +453,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261e70028b84cd646a899670c824f11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5161006290854518575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988374602731329599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c50dd7723b544e12a9cd977211d2595, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: {fileID: 988374602731329588}
+  current_hp: {fileID: 0}
