@@ -62,11 +62,11 @@ public class PlayerController : MonoBehaviour
             Vector3 camTarget = new Vector3(camDistance * Mathf.Cos(angle), camDistance * Mathf.Sin(angle), -10);
             cam.localPosition = Vector3.Lerp(cam.localPosition, camTarget, 0.1f);
             time++;
-            if (Input.GetButtonDown("Fire1"))
+            if (Input.GetButton("Fire1"))
             {
                 switch(guns[currentGun]){
                     case "pistol":
-                        if(time > 20)
+                        if(time > 15)
                         {
                             shootBullet(bullet, gun.position, gun.rotation);
                             time = 0;
@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (collision.tag == "Killable")
             {
-                GetComponent<Health>().takeDamage(colDmg);
+                // GetComponent<Health>().takeDamage(colDmg);
                 // Take damage if contact in vulnerable 
             }
             else if (collision.tag == "interact")
