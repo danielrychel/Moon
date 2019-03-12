@@ -28,6 +28,13 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb2d;
     private DashAbility dashLogic;
 
+    public Animator animator;
+
+    public enum ActState
+    {
+        Fire, Dash, Run
+    }
+
     void Start() {
         rb2d = GetComponent<Rigidbody2D>();
         dashLogic = GetComponent<DashAbility>();
@@ -100,6 +107,15 @@ public class PlayerController : MonoBehaviour
             float vSpeed = Input.GetAxis("Vertical");
             Vector2 v = new Vector2(hSpeed, vSpeed);
             rb2d.velocity = v * maxSpeed;
+            animator.SetFloat("Direction", hSpeed);
+            if (hSpeed == 0f && vSpeed == 0f)
+                animator.SetBool("Moving", false);
+            else
+                animator.SetBool("Moving", true);
+            if (hSpeed == 0f)
+                animator.SetInteger("X", 0);
+            else
+                animator.SetInteger("X", 1);
         }
         if (!hp.alive)
         {
@@ -117,7 +133,10 @@ public class PlayerController : MonoBehaviour
             if (collision.tag == "Killable" && dashLogic.frame == DashAbility.Frames.Damage)
             {
                 if (collision.gameObject.GetComponent<Health>().takeDamage(swordDmg))
+                {
                     dashLogic.setKilled();
+                    hp.takeHeal(1);
+                }
                 Debug.Log("Contact");
             }
             else if (collision.tag == "Killable")
