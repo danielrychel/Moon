@@ -12382,6 +12382,8 @@ GameObject:
   m_Component:
   - component: {fileID: 449144904}
   - component: {fileID: 449144905}
+  - component: {fileID: 449144907}
+  - component: {fileID: 449144906}
   m_Layer: 0
   m_Name: level_end
   m_TagString: Untagged
@@ -12451,6 +12453,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &449144906
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449144903}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &449144907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 449144903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3b53d82878344dba3cf57e15c759ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 449144906}
+  player: {fileID: 2016614556}
 --- !u!4 &449234637 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4925001517059558124, guid: 1dfd42a5414d24a83a39b5e1e3f21acf,
@@ -49042,6 +49079,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 254479785}
     m_Modifications:
+    - target: {fileID: 2932382477473912115, guid: 2e82772f17f8ca94d9d63d0474c739e6,
+        type: 3}
+      propertyPath: m_Name
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: 2932382477473912114, guid: 2e82772f17f8ca94d9d63d0474c739e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -49096,11 +49138,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2932382477473912115, guid: 2e82772f17f8ca94d9d63d0474c739e6,
-        type: 3}
-      propertyPath: m_Name
-      value: Blood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e82772f17f8ca94d9d63d0474c739e6, type: 3}
