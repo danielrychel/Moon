@@ -63,11 +63,6 @@ public class PlayerController : MonoBehaviour
                     case "shotgun":
                         Quaternion bullet2Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z+10);
                         Quaternion bullet3Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z - 10);
-
-                        shootBullet(bullet, gun.position, bullet2Rotation);
-                        shootBullet(bullet, gun.position, bullet3Rotation);
-                        shootBullet(bullet, gun.position, gun.rotation);
-
                         break;
                     default:
                         shootBullet(bullet, gun.position, gun.rotation);
