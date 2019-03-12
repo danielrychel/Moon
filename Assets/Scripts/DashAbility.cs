@@ -33,7 +33,7 @@ public class DashAbility : MonoBehaviour
         switch (currentState)
         {
             case DashState.Ready:
-                if (Input.GetButtonDown("Dash"))
+                if (Input.GetKeyDown(KeyCode.LeftShift))
                 {
                     savedVelocity = rb2d.velocity;
                     dashing = true;
@@ -61,7 +61,7 @@ public class DashAbility : MonoBehaviour
 
                         rb2d.velocity = tempV * 60;
 
-                        rb2d.gameObject.GetComponent<Collider2D>().isTrigger = true;
+                      //  rb2d.gameObject.GetComponent<Collider2D>().isTrigger = true;
                         frame = Frames.Damage;
                         break;
                     case Frames.Damage:
@@ -72,7 +72,7 @@ public class DashAbility : MonoBehaviour
                         }
                         break;
                     case Frames.PreV:
-                        rb2d.gameObject.GetComponent<Collider2D>().isTrigger = false;
+                     //   rb2d.gameObject.GetComponent<Collider2D>().isTrigger = false;
                         frame = Frames.Vulnerable;
                         break;
                     case Frames.Vulnerable:
