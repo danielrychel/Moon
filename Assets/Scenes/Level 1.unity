@@ -20613,6 +20613,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389299, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1410714319
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389299, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad762198b03054ddbb0d3ee489bebba9, type: 3}
 --- !u!4 &780069780 stripped
@@ -23589,6 +23599,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389299, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1410714319
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389299, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad762198b03054ddbb0d3ee489bebba9, type: 3}
@@ -29306,6 +29326,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389299, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1410714319
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389299, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad762198b03054ddbb0d3ee489bebba9, type: 3}
@@ -50388,6 +50418,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389299, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1410714319
+      objectReference: {fileID: 0}
+    - target: {fileID: 7576942333253389299, guid: ad762198b03054ddbb0d3ee489bebba9,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad762198b03054ddbb0d3ee489bebba9, type: 3}
