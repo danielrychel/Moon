@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class level_end : MonoBehaviour
 {
@@ -26,7 +27,8 @@ public class level_end : MonoBehaviour
             {
                 //quit doesnt work in editor
                 //Application.Quit();
-                UnityEditor.EditorApplication.isPlaying = false;
+                //UnityEditor.EditorApplication.isPlaying = false;
+                SceneManager.LoadScene("Aras' Playground", LoadSceneMode.Additive);
             }
         }
     }
