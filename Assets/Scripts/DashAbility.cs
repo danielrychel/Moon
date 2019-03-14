@@ -33,7 +33,7 @@ public class DashAbility : MonoBehaviour
         switch (currentState)
         {
             case DashState.Ready:
-                if (Input.GetKeyDown(KeyCode.LeftShift))
+                if (Input.GetButtonDown("Dash"))
                 {
                     savedVelocity = rb2d.velocity;
                     dashing = true;
