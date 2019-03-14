@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     private DashAbility dashLogic;
 
     public Animator animator;
+    private int time = 0;
 
     public enum ActState
     {
@@ -60,22 +61,30 @@ public class PlayerController : MonoBehaviour
             // translate camera
             Vector3 camTarget = new Vector3(camDistance * Mathf.Cos(angle), camDistance * Mathf.Sin(angle), -10);
             cam.localPosition = Vector3.Lerp(cam.localPosition, camTarget, 0.1f);
-
-            if (Input.GetButtonDown("Fire1"))
+            time++;
+            if (Input.GetButton("Fire1"))
             {
                 switch(guns[currentGun]){
                     case "pistol":
-                        shootBullet(bullet, gun.position, gun.rotation);
+                        if(time > 15)
+                        {
+                            shootBullet(bullet, gun.position, gun.rotation);
+                            time = 0;
+                        }
                         break;
                     case "shotgun":
-                        Quaternion bullet2Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z+10);
-                        Quaternion bullet3Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z - 10);
-                        shootBullet(bullet, gun.position, bullet2Rotation);
-                        shootBullet(bullet, gun.position, bullet3Rotation);
-                        shootBullet(bullet, gun.position, gun.rotation);
+                        if(time > 50)
+                        {
+                            Quaternion bullet2Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z + 10);
+                            Quaternion bullet3Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z - 10);
+                            shootBullet(bullet, gun.position, bullet2Rotation);
+                            shootBullet(bullet, gun.position, bullet3Rotation);
+                            shootBullet(bullet, gun.position, gun.rotation);
+                            time = 0;
+                        } 
                         break;
                     default:
-                        shootBullet(bullet, gun.position, gun.rotation);
+                        //shootBullet(bullet, gun.position, gun.rotation);
                         break;
                 }
             }
@@ -141,7 +150,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (collision.tag == "Killable")
             {
-                GetComponent<Health>().takeDamage(colDmg);
+                // GetComponent<Health>().takeDamage(colDmg);
                 // Take damage if contact in vulnerable 
             }
             else if (collision.tag == "interact")
