@@ -32,11 +32,11 @@ RectTransform:
   m_Father: {fileID: 905770554}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -357, y: -20}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 45, y: -19.99997}
   m_SizeDelta: {x: 200, y: 30}
-  m_Pivot: {x: 0.5, y: 1}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &169300119
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -206,11 +206,11 @@ RectTransform:
   m_Father: {fileID: 905770554}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 46, y: 247.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 46, y: -19.49997}
   m_SizeDelta: {x: 200, y: 30}
-  m_Pivot: {x: 0, y: 0.5}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &918326070
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -530,8 +530,8 @@ MonoBehaviour:
   pistol: {fileID: 0}
   camDistance: 2
   cam: {fileID: 988374602624477086}
-  swordDmg: 2
-  colDmg: 1
+  swordDmg: 60
+  colDmg: 0
   hp: {fileID: 988374602731329588}
   bullet: {fileID: 3286294735871222309, guid: 0cf6bbfc1cae1b3408a9bbd3d51c091e, type: 3}
   animator: {fileID: 1831969835}
@@ -590,8 +590,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1611557363
-  m_SortingLayer: 4
+  m_SortingLayerID: -1410714319
+  m_SortingLayer: 3
   m_SortingOrder: 887
   m_Sprite: {fileID: 21300000, guid: 3ed5aee75b60b6142b1ad66aeb01af48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d13897fa7c5b8499ca18e6e631f153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 5
+  MaxHP: 100
   RemainingHP: 0
   rb2d: {fileID: 988374602731329544}
   alive: 1
@@ -689,7 +689,8 @@ MonoBehaviour:
   cooldownTime: 1
   windUpTime: 0.1
   dmgTime: 0.7
-  vlnTime: 0.1
+  vlnTime: 0.2
+  dashVelocity: 60
   swordDmg: 0
   colDmg: 0
   dashing: 0
