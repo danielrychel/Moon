@@ -571,7 +571,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACQn+v3wuoBUQIAAPYEAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMuS2jAQ/BVK50AZlkc2twRYNgcWatnUXnwR1hirkCWXHsur+PeMZBsbUjkhpntG3TMjXwiXpoDEKr3QnC0VA/KjQ/yZfOs04Csc6U7JDT9DzfnkzGaeRAPnnVquMN73aUblYDVPfsqd8OQIg07yVOl8znYwVcYaDKdUGEBIK+uzJYYuHXLEn+6zTznhaTDxpzOenqPOFY8JSAu6ofafetGoJg9743FFL9lOJoLmBTAvvUka1eUnJU2iqYrhDSRKCG4qRcSeiuB4U2SgwVtmnKLBoMLTM+C7zPr727mrNDVgK/eanmZcY5/KouSXKpuXU7MvZX1R4cL9QVBZcvkP2i3hVKv8tb61H/kbbMaT/Ts9JdTYVm/b4dm9bCcPVOzpVsBnBvJNLbRykiFotfOpzsBg1vy9GZtmkOybeCn1IeiKptl1r+tBeg/X4P04FTzfeqg3LAMboUKzw/xB41h+o+CwHaYqgVGv4o+BD7prr1EFvHBtLEKVS+nlbZXTnkrmoWfejbNTpSXodoUCJBX2tMY69nGCD9j/s16ofzHV7RVWP4SHlBBu+FH0AK3V4TYtk6nDEky2clZwCU2rPfCGjZoqKcsFM/egz9o4ndKklbVznN2vFon66XAA0XgUDcaTYbrtQvo0TPuwjb4nLIJRRMLucYk2qViXOqvu4NRkU1zintXfkc5C0yLsOtP0sODnXLX0cZmqTaIB5OquggGNd+CLZHPGsT0bsJbLMG5yiYlQyR5YfOPHwej8aDWNmzbHpOBfyvpITKbhuxGTK7n+BVBLAwQUAAAICAAAkJ/rj0jdQGwAAAB3AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9Iz1VFQSi9KLMgoBgoYgjilmSkgdrSSgWGaiVGqgZmpgZGZuUlakm5qmrFJmmFqkoFFcopBqqmBUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACQn+v3wuoBUQIAAPYEAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACQn+uPSN1AbAAAAHcAAAAJACQAAAAAAAAAAAAAAJ4CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAVQMAAAAA
+    dataString: UEsDBBQAAAgIAACQn+vpnSN7WgIAAP4EAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzg0jCJCmt9YQ0kMSJqSTiy/CWmMNsuTRR/jI8N+7ku3Y0OkJsbtv9d7blT+JULaCzGmzNII/aQ7kx4CEM/k26JKPcGBbrdbiBG3Nu+CuCEUs1rwyJzTGRwFmdQnOiOyn2spQTDHolci1KRd8C4m2zmI4Z9ICpox2Aa0w9DkgB/y5uQ+QI57Gd+F0wtM9HZzxmIFyYLrS0e2QTtviyXA2o5ROZw2mhniVSVZWwAP/DjkdN7DZNJYpVNZU0OE4tMi0lMI2zIg7VlH5uirAQJDOBUOhkU3QXYDYFi7w6GNf8tyCa1ww7DgXBv2qm5JfujaxZHZXM/tg0odrRpFT3fLpn+xNnc6NLh/bW0c03OAKke1e2TFj1vU87ofnl7S92jO5YxsJ7wWoZ7002iuOSWd8gHoL43n390tYUkC26+I11augrzq/25G2Aw0azlH7IZGi3ETfJ3VgLXU0O+4BGJzMbyQct8Q2LTAaWPyx8Ma2/XVqEg/CWIepRqUK9Dbam1BKFtGzoMa7RBsFpt+hAsWkO66wj7ue4FXu/6gHFl5Oc3uTax/EFSSGu3pKr1Irvf+ali30/gls8eKdFAo6q0PiGY1KtFL1gtnLZECtvclZ1kNtveCXq0XoKJ+Mgc6mdDy7m+SbG8hvJ/kINvR7xilMKYm7JxTKZHJV82zcwamprrnCPWu/J4OlYVXcdW7YfilOpe7xEyrX68wAqJeLDhYM3oGPki+4QHvW4JxQcdzkMyVSZzvg6Vd9GoUuDs6wtLM5JZX40C5EUpLE70dKzuT8F1BLAwQUAAAICAAAkJ/rj0jdQGwAAAB3AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9Iz1VFQSi9KLMgoBgoYgjilmSkgdrSSgWGaiVGqgZmpgZGZuUlakm5qmrFJmmFqkoFFcopBqqmBUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACQn+vpnSN7WgIAAP4EAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACQn+uPSN1AbAAAAHcAAAAJACQAAAAAAAAAAAAAAKcCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAXgMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -43626,6 +43626,134 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1581047443}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1582604762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1582604764}
+  - component: {fileID: 1582604763}
+  m_Layer: 0
+  m_Name: BackgroundMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1582604763
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582604762}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243501804843759940, guid: 51e1bc06e0b7f3546aaff81769c079a5,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1582604764
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1582604762}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.423569, y: 5.20475, z: -0.13745293}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1585109448
 PrefabInstance:
   m_ObjectHideFlags: 0
