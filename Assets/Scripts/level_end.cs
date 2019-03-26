@@ -29,7 +29,7 @@ public class level_end : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Escape"))
+        if (Input.GetButtonDown("Exit"))
         {
             quitGame();
         }
