@@ -26,15 +26,12 @@ public class EnemyController : MonoBehaviour
 
     private float agroDistance = 15;
     private float alertDistance = 20;
-
-    private float time = 15;
+    private float gunCooldown = 15;
 
     public RoutineController routine;
-
     public Transform[] PatrolRoute;
-    private int patrolState;
-
     public int PatrolSize;
+    private int patrolState;
     private bool markPlayer;
 
     void Start()
@@ -89,7 +86,6 @@ public class EnemyController : MonoBehaviour
                     routine.SetForget();
                     markPlayer = false;
                 }
-
             }
 
             if (routine.GetAggro() || distance < agroDistance)
@@ -104,14 +100,13 @@ public class EnemyController : MonoBehaviour
                     {
                         enemy_to_player.Normalize();
                         SetMoveTo(player.transform);
-                        //                       rb2d.velocity = enemy_to_player * maxSpeed;
+                        //rb2d.velocity = enemy_to_player * maxSpeed;
                     }
-                    time += 1;
-                    if (time > 50)
+                    gunCooldown += 1;
+                    if (gunCooldown > 50)
                     {
-                        time = 0;
-                        var shooting = Instantiate(bullet, gun.position, gun.rotation);
-                        shooting.tag = "EnemyAttack";
+                        gunCooldown = 0;
+                        shootGun(bullet, gun);
                     }
                 }
             }
@@ -126,5 +121,11 @@ public class EnemyController : MonoBehaviour
     private void SetMoveTo(Transform target)
     {
         if (moveTo.target != target) moveTo.target = target;
+    }
+
+    private void shootGun(Transform bullet, Transform gun)
+    {
+        var shooting = Instantiate(bullet, gun.position, gun.rotation);
+        shooting.tag = "EnemyAttack";
     }
 }
