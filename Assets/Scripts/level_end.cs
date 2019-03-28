@@ -25,11 +25,22 @@ public class level_end : MonoBehaviour
         {
             if (Input.GetKeyDown("e"))
             {
-                //quit doesnt work in editor
-                //Application.Quit();
-                //UnityEditor.EditorApplication.isPlaying = false;
-                SceneManager.LoadScene("Aras' Playground", LoadSceneMode.Additive);
+                quitGame();
             }
         }
+
+        if (Input.GetButtonDown("Exit"))
+        {
+            quitGame();
+        }
+    }
+
+    void quitGame()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
     }
 }
