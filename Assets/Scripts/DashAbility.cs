@@ -11,6 +11,7 @@ public class DashAbility : MonoBehaviour
     public float dmgTime = 0.7f;
     public float vlnTime = 0.01f;
     private float dashTime;
+    public int dashVelocity;
 
  //   private Stack<Collider2D> collided;
 
@@ -28,7 +29,7 @@ public class DashAbility : MonoBehaviour
     public Rigidbody2D rb2d;
     
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         switch (currentState)
         {
@@ -59,7 +60,7 @@ public class DashAbility : MonoBehaviour
                         break;
                     case Frames.PreDash:
 
-                        rb2d.velocity = tempV * 60;
+                        rb2d.velocity = tempV * dashVelocity;
 
                       //  rb2d.gameObject.GetComponent<Collider2D>().isTrigger = true;
                         frame = Frames.Damage;
@@ -92,7 +93,7 @@ public class DashAbility : MonoBehaviour
                 }
                 break;
             case DashState.Cooldown:
-                dashTime -= Time.deltaTime;
+                dashTime -= Time.fixedDeltaTime;
                 dashing = false;
                 if (dashTime <= 0)
                 {

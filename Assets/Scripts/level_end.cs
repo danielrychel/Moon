@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class level_end : MonoBehaviour
 {
@@ -24,10 +25,22 @@ public class level_end : MonoBehaviour
         {
             if (Input.GetKeyDown("e"))
             {
-                //quit doesnt work in editor
-                //Application.Quit();
-                UnityEditor.EditorApplication.isPlaying = false;
+                quitGame();
             }
         }
+
+        if (Input.GetButtonDown("Exit"))
+        {
+            quitGame();
+        }
+    }
+
+    void quitGame()
+    {
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
     }
 }

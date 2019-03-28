@@ -10,6 +10,7 @@ public class DroneController : MonoBehaviour
 
     private Rigidbody2D rb2d;
     private Rigidbody2D player;
+    private bool agroed = false;
 
     void Start()
     {
@@ -26,11 +27,17 @@ public class DroneController : MonoBehaviour
     {
         if (hp.alive)
         {
-            Vector2 v = new Vector2(rb2d.transform.position.x, rb2d.transform.position.y);
-            Vector2 v2 = new Vector2(player.transform.position.x, player.transform.position.y);
-            v = v2 - v;
-            v.Normalize();
-            rb2d.velocity = v * maxSpeed;
+            Vector2 drone_vec = new Vector2(rb2d.transform.position.x, rb2d.transform.position.y);
+            Vector2 player_vec = new Vector2(player.transform.position.x, player.transform.position.y);
+            float distance = Mathf.Abs(Vector2.Distance(drone_vec, player_vec));
+            RaycastHit2D see = Physics2D.Linecast(drone_vec, player_vec); //check if the enemy can see the player
+            if (agroed || (see.transform.tag == "Player" && distance < 30))
+            {
+                agroed = true;
+                drone_vec = player_vec - drone_vec;
+                drone_vec.Normalize();
+                rb2d.velocity = drone_vec * maxSpeed;
+            }
         }
         else
         {
