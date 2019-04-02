@@ -125,7 +125,6 @@ public class BossController : MonoBehaviour
             }
         } else
         {
-
         }
     }
 }
