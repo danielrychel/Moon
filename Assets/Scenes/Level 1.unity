@@ -14365,11 +14365,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyDrone
       objectReference: {fileID: 0}
-    - target: {fileID: 2991867501808357469, guid: 58bb4690722ede142862e9aaa20aa0eb,
-        type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2991867501808357464, guid: 58bb4690722ede142862e9aaa20aa0eb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14424,10 +14419,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 670678039, guid: 58bb4690722ede142862e9aaa20aa0eb, type: 3}
-      propertyPath: m_Layer
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58bb4690722ede142862e9aaa20aa0eb, type: 3}
@@ -26045,11 +26036,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyDrone (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 2991867501808357469, guid: 58bb4690722ede142862e9aaa20aa0eb,
-        type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2991867501808357464, guid: 58bb4690722ede142862e9aaa20aa0eb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26104,10 +26090,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 670678039, guid: 58bb4690722ede142862e9aaa20aa0eb, type: 3}
-      propertyPath: m_Layer
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58bb4690722ede142862e9aaa20aa0eb, type: 3}
@@ -50046,6 +50028,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 254479785}
     m_Modifications:
+    - target: {fileID: 2932382477473912115, guid: 2e82772f17f8ca94d9d63d0474c739e6,
+        type: 3}
+      propertyPath: m_Name
+      value: Blood
+      objectReference: {fileID: 0}
     - target: {fileID: 2932382477473912114, guid: 2e82772f17f8ca94d9d63d0474c739e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -50100,11 +50087,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2932382477473912115, guid: 2e82772f17f8ca94d9d63d0474c739e6,
-        type: 3}
-      propertyPath: m_Name
-      value: Blood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e82772f17f8ca94d9d63d0474c739e6, type: 3}
@@ -52720,11 +52702,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyDrone
       objectReference: {fileID: 0}
-    - target: {fileID: 2991867501808357469, guid: 58bb4690722ede142862e9aaa20aa0eb,
-        type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 2991867501808357464, guid: 58bb4690722ede142862e9aaa20aa0eb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -52779,10 +52756,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 670678039, guid: 58bb4690722ede142862e9aaa20aa0eb, type: 3}
-      propertyPath: m_Layer
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58bb4690722ede142862e9aaa20aa0eb, type: 3}
