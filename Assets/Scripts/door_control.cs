@@ -24,22 +24,17 @@ public class door_control : MonoBehaviour
         Vector2 controls_to_player = player_vec - control_vec;
         float distance = Mathf.Abs(Vector2.Distance(control_vec, player_vec));
 
-        if (!switched) {
-            if (distance <= 3)
+        if (distance <= 3)
+        {
+            sprite.color = new Color(0.8f, 0.5f, 1f, 0.9f);
+            if (Input.GetKeyDown("e"))
             {
-                sprite.color = new Color(0.8f, 0.5f, 1f, 0.9f);
-                if (Input.GetKeyDown("e"))
-                {
-                    switched = true;
-                    sprite.color = new Color(0.5f, 0.5f, 0.5f, 0.9f);
-                }
-                //sprite.color = orig_color;
-            }
-            else if (!switched)
-            {
-                sprite.color = orig_color;
+                switched = true;
             }
         }
-
+        else
+        {
+            sprite.color = orig_color;
+        }
     }
 }

@@ -65,7 +65,7 @@ public class EnemyController : MonoBehaviour
             {
                 if(PatrolSize > 0 && targetReached.SetNextTarget(PatrolRoute[patrolState])) patrolState = (patrolState + 1) % PatrolSize;
             }
-            if (routine.GetAlert() || distance < alertDistance)
+            if (routine.GetAlert() || (distance < alertDistance && see.transform.tag == "Player"))
             {
                 routine.SetAlert();
                 float angle = Mathf.Atan2(enemy_to_player.y, enemy_to_player.x);
