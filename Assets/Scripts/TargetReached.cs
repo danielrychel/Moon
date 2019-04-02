@@ -10,6 +10,11 @@ public class TargetReached : AIPath
     private bool arrived = false;
     public AIDestinationSetter moveTo;
 
+    //void Start()
+    //{
+    //    this.IAstarAI.radius = 1;
+    //}
+
     public bool SetNextTarget(Transform newTarget)
         {
             nextTarget = newTarget;
