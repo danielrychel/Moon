@@ -8,9 +8,12 @@ public class BossController : MonoBehaviour
 {
     public Health hp;
     public Transform corpse;
-    public Transform bullet;
-    public Transform gunPivot;
-    public Transform gun;
+    public Transform pistolBullet;
+    public Transform MGBullet;
+    public Transform pistolPivot;
+    public Transform pistol;
+    public Transform MGPivot;
+    public Transform machineGun;
 
     public Transform playerGhost;
     public TargetReached targetReached;
@@ -26,11 +29,11 @@ public class BossController : MonoBehaviour
     private int patrolState;
 
     private float pistolCooldown = 0;
-    private float machineGunCooldown = 0;
+    private float MGCooldown = 0;
     private float maxSpeed = 2;
     private float shootingTime = 0;
     private bool agroed = false;
-    private bool shooting = false;
+    private bool shootingMG = false;
 
     void Start()
     {
@@ -72,9 +75,9 @@ public class BossController : MonoBehaviour
             }
             if (agroed)
             {
-                aimGun(enemy_to_player, gunPivot); 
+                aimGun(enemy_to_player); 
                 SetMoveTo(player.transform);
-                RaycastHit2D hit = Physics2D.Linecast(gun.position, player_vec); //check if the enemy can see the player
+                RaycastHit2D hit = Physics2D.Linecast(pistol.position, player_vec); //check if the enemy can see the player
                 if (hit.transform.tag == "Player") //If it can see the player, then shoot at it 
                 { //probably able to get rid of this if statement but not sure yet
                     SetMoveTo(player.transform);
@@ -100,10 +103,11 @@ public class BossController : MonoBehaviour
         shooting.tag = "EnemyAttack";
     }
 
-    private void aimGun(Vector2 enemy_to_player, Transform gunPivot)
+    private void aimGun(Vector2 enemy_to_player)
     {
         float angle = Mathf.Atan2(enemy_to_player.y, enemy_to_player.x);
-        gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI);
+        pistolPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI);
+        MGPivot.rotation = pistolPivot.rotation;
     }
 
     private void handleShooting()
@@ -112,19 +116,24 @@ public class BossController : MonoBehaviour
         if (pistolCooldown > 50)
         {
             pistolCooldown = 0;
-            shootGun(bullet, gun);
+            shootGun(pistolBullet, pistol);
         }
         shootingTime += 1;
-        if (shooting)
+        if (shootingMG)
         {
-            shootGun(bullet, gun);
-            if(shootingTime > 150)
+            shootGun(MGBullet, machineGun);
+            if(shootingTime > 200)
             {
-                shooting = false;
+                shootingMG = false;
                 shootingTime = 0;
             }
         } else
         {
+            if(shootingTime > 150)
+            {
+                shootingMG = true;
+                shootingTime = 0;
+            }
         }
     }
 }
