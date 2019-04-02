@@ -125,14 +125,6 @@ public class BossController : MonoBehaviour
             }
         } else
         {
-            if (reloadTime > 300)
-            {
-                reloadTime = 0;
-            }
-            if (machineGunCooldown > 4)
-            {
-
-            }
         }
     }
 }
