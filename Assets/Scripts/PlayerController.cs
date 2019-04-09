@@ -31,6 +31,8 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private int time = 0;
 
+    public AudioClip footsteps;
+
     public enum ActState
     {
         Fire, Dash, Run
@@ -169,5 +171,13 @@ public class PlayerController : MonoBehaviour
     void shootBullet(Transform bulletType, Vector3 position, Quaternion rotation){
         var shooting = Instantiate(bulletType, position, rotation);
         shooting.tag = "PlayerAttack";
+    }
+
+    void movingSound()
+    {
+        if (animator.GetBool("Moving"))
+        {
+            SoundManager.instance.PlaySingle(footsteps);
+        }
     }
 }
