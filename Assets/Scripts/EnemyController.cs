@@ -98,7 +98,7 @@ public class EnemyController : MonoBehaviour
                     routine.SetAggro();
                     if (distance > 3)
                     {
-                        enemy_to_player.Normalize();
+                        //enemy_to_player.Normalize();
                         SetMoveTo(player.transform);
                         //rb2d.velocity = enemy_to_player * maxSpeed;
                     }
