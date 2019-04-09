@@ -106,6 +106,11 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+
+        SpriteRenderer playerSprite = GetComponent<SpriteRenderer>();
+        float flashSpeed = 2.0f;
+        float color = (Mathf.Sin(2.0f*Mathf.PI*flashSpeed*Time.time)+1.0f)/2.0f;
+        playerSprite.color = new Color(1.0f, color, color);
     }
 
     void FixedUpdate()
