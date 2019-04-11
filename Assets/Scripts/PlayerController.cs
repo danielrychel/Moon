@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     public Health hp;
 
+    private bool moving;
 
     public Transform bullet;
 
@@ -31,6 +32,10 @@ public class PlayerController : MonoBehaviour
 
     public Animator animator;
     private int time = 0;
+
+    public AudioClip footsteps;
+    private float footstepPeriod = 0.58333f;
+    private float WalkTime = 0.0f;
 
     public enum ActState
     {
@@ -107,10 +112,20 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
+
+        SpriteRenderer playerSprite = GetComponent<SpriteRenderer>();
+        float flashSpeed = 2.0f;
+        float color = (Mathf.Sin(2.0f*Mathf.PI*flashSpeed*Time.time)+1.0f)/2.0f;
+        playerSprite.color = new Color(1.0f, color, color);
     }
 
     void FixedUpdate()
     {
+        if (Time.time > WalkTime && moving)
+        {
+            WalkTime += footstepPeriod;
+            movingSound();
+        }
         if (!dashLogic.dashing && hp.alive)
         {
             float hSpeed = Input.GetAxis("Horizontal");
@@ -119,9 +134,15 @@ public class PlayerController : MonoBehaviour
             rb2d.velocity = v * maxSpeed;
             animator.SetFloat("Direction", hSpeed);
             if (hSpeed == 0f && vSpeed == 0f)
+            {
                 animator.SetBool("Moving", false);
+                moving = false;
+            }
             else
+            {
                 animator.SetBool("Moving", true);
+                moving = true;
+            }
             if (hSpeed == 0f)
                 animator.SetInteger("X", 0);
             else
@@ -168,5 +189,10 @@ public class PlayerController : MonoBehaviour
     void shootBullet(Transform bulletType, Vector3 position, Quaternion rotation){
         var shooting = Instantiate(bulletType, position, rotation);
         shooting.tag = "PlayerAttack";
+    }
+
+    void movingSound()
+    {
+       SoundManager.instance.PlaySingle(footsteps);
     }
 }
