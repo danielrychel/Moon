@@ -12,6 +12,7 @@ TagManager:
   - Ethereal
   - EnemyAttack
   - PlayerAttack
+  - death_ui
   layers:
   - Default
   - TransparentFX
