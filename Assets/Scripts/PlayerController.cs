@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour
     public Sprite shotgun;
     public Sprite pistol;
     private string[] guns = new string[2];
-    int currentGun = 0;
+    public int currentGun = 0;
 
     public float camDistance;
     public Transform cam;
@@ -112,11 +112,16 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-
-        SpriteRenderer playerSprite = GetComponent<SpriteRenderer>();
-        float flashSpeed = 2.0f;
-        float color = (Mathf.Sin(2.0f*Mathf.PI*flashSpeed*Time.time)+1.0f)/2.0f;
-        playerSprite.color = new Color(1.0f, color, color);
+        if((hp.RemainingHP / hp.MaxHP) < 0.75) {
+            SpriteRenderer playerSprite = GetComponent<SpriteRenderer>();
+            float flashSpeed = 4.0f * (1-(hp.RemainingHP / hp.MaxHP));
+            float color = (Mathf.Sin(2.0f * Mathf.PI * flashSpeed * Time.time) + 1.0f) / 2.0f;
+            playerSprite.color = new Color(1.0f, color, color);
+        }
+        else {
+            SpriteRenderer playerSprite = GetComponent<SpriteRenderer>();
+            playerSprite.color = new Color(1.0f, 1.0f, 1.0f);
+        }
     }
 
     void FixedUpdate()
@@ -153,8 +158,8 @@ public class PlayerController : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = corpse.gameObject.GetComponent<SpriteRenderer>().sprite;
             //           Instantiate(corpse, new Vector3(rb2d.gameObject.transform.position.x + 1f, rb2d.gameObject.transform.position.y - 0.7f, rb2d.gameObject.transform.position.z), Quaternion.identity);
             //   Die.exe;
-            Scene thisScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(thisScene.name);
+            //Scene thisScene = SceneManager.GetActiveScene();
+            //SceneManager.LoadScene(thisScene.name);
 
         }
     }

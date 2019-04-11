@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 45, y: -19.99997}
+  m_AnchoredPosition: {x: 45, y: -20}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &169300119
@@ -208,7 +208,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 46, y: -19.49997}
+  m_AnchoredPosition: {x: 46, y: -19.5}
   m_SizeDelta: {x: 200, y: 30}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &918326070
@@ -486,6 +486,7 @@ GameObject:
   - component: {fileID: 988374602731329586}
   - component: {fileID: 5161006290854518575}
   - component: {fileID: 1831969835}
+  - component: {fileID: 843630858938677820}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -528,6 +529,7 @@ MonoBehaviour:
   gunGameObject: {fileID: 0}
   shotgun: {fileID: 0}
   pistol: {fileID: 0}
+  currentGun: 0
   camDistance: 2
   cam: {fileID: 988374602624477086}
   swordDmg: 60
@@ -535,6 +537,7 @@ MonoBehaviour:
   hp: {fileID: 988374602731329588}
   bullet: {fileID: 3286294735871222309, guid: 0cf6bbfc1cae1b3408a9bbd3d51c091e, type: 3}
   animator: {fileID: 1831969835}
+  footsteps: {fileID: 0}
 --- !u!50 &988374602731329544
 Rigidbody2D:
   serializedVersion: 4
@@ -741,3 +744,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &843630858938677820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988374602731329599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa5649971b5ac42ee8be554fa27ba507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathObjects: []
+  hp: {fileID: 988374602731329588}
