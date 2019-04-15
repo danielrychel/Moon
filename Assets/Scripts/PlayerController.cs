@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
     public Sprite shotgun;
     public Sprite pistol;
-    private string[] guns = new string[2];
+    public string[] guns = new string[2];
     public int currentGun = 0;
 
     public float camDistance;
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
         dashLogic = GetComponent<DashAbility>();
         gunGameObject = gun.gameObject;
         shotgun = Resources.Load<Sprite>("shotgun") as Sprite;
-        pistol = Resources.Load<Sprite>("gun") as Sprite;
+        pistol = Resources.Load<Sprite>("Pistol") as Sprite;
         guns[0] = "pistol";
         guns[1] = "shotgun";
 
