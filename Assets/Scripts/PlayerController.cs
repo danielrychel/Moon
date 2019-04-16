@@ -75,8 +75,9 @@ public class PlayerController : MonoBehaviour
                         }
                         break;
                     case "shotgun":
-                        if(time > 50)
+                        if(time > 70)
                         {
+                            GetComponent<PlayerSoundController>().FireShotgun();
                             Quaternion bullet2Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z + 10);
                             Quaternion bullet3Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z - 10);
                             shootBullet(bullet, gun.position, bullet2Rotation);
