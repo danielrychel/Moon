@@ -13,6 +13,7 @@ TagManager:
   - EnemyAttack
   - PlayerAttack
   - death_ui
+  - gun_ui
   layers:
   - Default
   - TransparentFX
