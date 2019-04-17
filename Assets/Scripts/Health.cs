@@ -25,9 +25,9 @@ public class Health : MonoBehaviour
             alive = false;
             uIController.GameOver();
             Debug.Log("Killed!");
-
             return true;
         }
+        GetComponent<PlayerSoundController>().TakeDamage();
         Debug.Log("Damage!");
         return false;
     }

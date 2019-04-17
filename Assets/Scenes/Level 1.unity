@@ -32326,6 +32326,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dfd42a5414d24a83a39b5e1e3f21acf, type: 3}
+--- !u!82 &1155711773 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1595705254, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+    type: 3}
+  m_PrefabInstance: {fileID: 1418347409}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1157415389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39852,7 +39858,29 @@ PrefabInstance:
         type: 3}
       propertyPath: gameOverMenu
       value: 
-      objectReference: {fileID: 5616189410877565368}
+      objectReference: {fileID: 224244360}
+    - target: {fileID: 843630858938677820, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+        type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 703794462}
+    - target: {fileID: 5161006290854518575, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+        type: 3}
+      propertyPath: current_hp
+      value: 
+      objectReference: {fileID: 311069489}
+    - target: {fileID: 669785501, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
+      propertyPath: fireShotgun.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 669785501, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
+      propertyPath: playerShotgun
+      value: 
+      objectReference: {fileID: 1155711773}
+    - target: {fileID: 669785501, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
+      propertyPath: fireShotgun.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8eabe3f13b1154a92946b9ceaf925fd5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
 --- !u!1001 &1423503521
