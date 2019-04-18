@@ -39869,6 +39869,12 @@ PrefabInstance:
       propertyPath: uIController
       value: 
       objectReference: {fileID: 491922291}
+    - target: {fileID: 988374602731329547, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
+        type: 3}
+      propertyPath: shotgunBullet
+      value: 
+      objectReference: {fileID: 3286294735871222309, guid: d2cb8be6d84384698844acb6019092ae,
+        type: 3}
     - target: {fileID: 988374602731329546, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
         type: 3}
       propertyPath: m_LocalPosition.x
