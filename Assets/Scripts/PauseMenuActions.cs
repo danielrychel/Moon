@@ -33,4 +33,12 @@ public class PauseMenuActions : MonoBehaviour
         optionsMenu.SetActive(true);
         gameObject.SetActive(false);
     }
+
+    public void RestartLevel() {
+        GameManager.instance.GetComponent<LevelManagement>().ResetLevel();
+    }
+
+    public void ExitMainMenu() {
+        GameManager.instance.GetComponent<LevelManagement>().ExitMainMenu();
+    }
 }
