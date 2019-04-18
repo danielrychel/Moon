@@ -98,10 +98,10 @@ public class BossController : MonoBehaviour
     private void aimGun(Transform gun, Transform gunPivot)
     {
         Vector2 player_vec = new Vector2(player.transform.position.x, player.transform.position.y);
-        /*if (gun == pistol)
+        if (gun == pistol)
         {
-            player_vec += player.velocity/2; //woww this makes it really tough!
-        }*/
+            player_vec += player.velocity/8; //woww this makes it really tough!
+        }
         Vector2 gun_vec = new Vector2(gun.transform.position.x, gun.transform.position.y);
         gun_vec = player_vec - gun_vec;
 

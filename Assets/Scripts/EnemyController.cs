@@ -68,8 +68,6 @@ public class EnemyController : MonoBehaviour
             if (routine.GetAlert() || (distance < alertDistance && see.transform.tag == "Player"))
             {
                 routine.SetAlert();
-                float angle = Mathf.Atan2(enemy_to_player.y, enemy_to_player.x);
-                gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI); //aim gun at player
                 if (see.transform.tag == "Player")
                 {
                     LastPlayerPos = player_vec;
@@ -90,11 +88,11 @@ public class EnemyController : MonoBehaviour
 
             if (routine.GetAggro() || distance < agroDistance)
             {
-                float angle = Mathf.Atan2(enemy_to_player.y, enemy_to_player.x);
-                gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI); //aim gun at player
                 RaycastHit2D hit = Physics2D.Linecast(gun.position, player_vec); //check if the enemy can see the player
                 if (hit.transform.tag == "Player") //If it can see the player, then shoot at it 
                 {
+                    float angle = Mathf.Atan2(enemy_to_player.y, enemy_to_player.x);
+                    gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI); //aim gun at player
                     routine.SetAggro();
                     if (distance > 3)
                     {
