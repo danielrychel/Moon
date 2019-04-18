@@ -134,6 +134,7 @@ public class EnemyController : MonoBehaviour
         }
         else
         {
+            GameManager.instance.AggroCounter(0);
             Instantiate(corpse, new Vector3(rb2d.gameObject.transform.position.x + 1f, rb2d.gameObject.transform.position.y - 0.7f, rb2d.gameObject.transform.position.z), Quaternion.identity);
             Destroy(rb2d.gameObject);
         }
