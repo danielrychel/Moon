@@ -21,11 +21,14 @@ public class healthBar : MonoBehaviour
 
     public void updateHealth()
     {
-        float damage_ratio = hp.RemainingHP / hp.MaxHP;
-        current_hp.rectTransform.localScale = new Vector3(damage_ratio, 1, 1);
-        if(hp.RemainingHP <= 0) {
-            Scene thisScene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(thisScene.name);
+        if (hp.RemainingHP <= 0)
+        {
+            current_hp.rectTransform.localScale = new Vector3(0, 1, 1);
+        }
+        else
+        {
+            float damage_ratio = hp.RemainingHP / hp.MaxHP;
+            current_hp.rectTransform.localScale = new Vector3(damage_ratio, 1, 1);
         }
     }
 }

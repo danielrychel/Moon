@@ -6,10 +6,11 @@ using UnityEngine.UI;
 using UnityEngine.Audio;
 
 public class OptionsMenuActions : MonoBehaviour {
-    public GameObject mainMenu;
-    public Slider musicVolSlider;
-    public Slider sfxVolSlider;
+    public GameObject backMenu;
     public AudioMixer mixer;
+    public AudioSource sfxTest;
+
+    private bool sfxChanged = false;
 
     // Start is called before the first frame update
     void Start()
@@ -19,12 +20,30 @@ public class OptionsMenuActions : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        mixer.SetFloat("musicVol", musicVolSlider.value);
-        mixer.SetFloat("sfxVol", sfxVolSlider.value);
+        if(!sfxTest.isPlaying && sfxChanged) {
+            sfxTest.Play();
+            sfxChanged = false;
+        }
+    }
+
+    public void SetMusicVol(float volume) {
+        mixer.SetFloat("musicVol", Mathf.Log(volume) * 20);
+    }
+
+    public void SetSFXVol(float volume) {
+        mixer.SetFloat("sfxVol", Mathf.Log(volume) * 20);
+
+        if(!sfxTest.isPlaying) {
+            sfxTest.Play();
+            sfxChanged = false;
+        }
+        else {
+            sfxChanged = true;
+        }
     }
 
     public void Back() {
-        mainMenu.SetActive(true);
+        backMenu.SetActive(true);
         gameObject.SetActive(false);
     }
 }

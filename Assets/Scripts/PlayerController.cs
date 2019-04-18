@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,8 +13,8 @@ public class PlayerController : MonoBehaviour
 
     public Sprite shotgun;
     public Sprite pistol;
-    private string[] guns = new string[2];
-    int currentGun = 0;
+    public string[] guns = new string[2];
+    public int currentGun = 0;
 
     public float camDistance;
     public Transform cam;
@@ -21,8 +22,6 @@ public class PlayerController : MonoBehaviour
     public float swordDmg, colDmg;
 
     public Health hp;
-
-    private bool moving;
 
     public Transform bullet;
 
@@ -32,9 +31,6 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private int time = 0;
 
-    public AudioClip footsteps;
-    private float footstepPeriod = 0.58333f;
-    private float WalkTime = 0.0f;
 
     public enum ActState
     {
@@ -46,7 +42,7 @@ public class PlayerController : MonoBehaviour
         dashLogic = GetComponent<DashAbility>();
         gunGameObject = gun.gameObject;
         shotgun = Resources.Load<Sprite>("shotgun") as Sprite;
-        pistol = Resources.Load<Sprite>("gun") as Sprite;
+        pistol = Resources.Load<Sprite>("Pistol") as Sprite;
         guns[0] = "pistol";
         guns[1] = "shotgun";
 
@@ -73,13 +69,15 @@ public class PlayerController : MonoBehaviour
                     case "pistol":
                         if(time > 15)
                         {
+                            GetComponent<PlayerSoundController>().FirePistol();
                             shootBullet(bullet, gun.position, gun.rotation);
                             time = 0;
                         }
                         break;
                     case "shotgun":
-                        if(time > 50)
+                        if(time > 70)
                         {
+                            GetComponent<PlayerSoundController>().FireShotgun();
                             Quaternion bullet2Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z + 10);
                             Quaternion bullet3Rotation = Quaternion.Euler(gun.rotation.eulerAngles.x, gun.rotation.eulerAngles.y, gun.rotation.eulerAngles.z - 10);
                             shootBullet(bullet, gun.position, bullet2Rotation);
@@ -111,20 +109,20 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-
-        SpriteRenderer playerSprite = GetComponent<SpriteRenderer>();
-        float flashSpeed = 2.0f;
-        float color = (Mathf.Sin(2.0f*Mathf.PI*flashSpeed*Time.time)+1.0f)/2.0f;
-        playerSprite.color = new Color(1.0f, color, color);
+        if((hp.RemainingHP / hp.MaxHP) < 0.75) {
+            SpriteRenderer playerSprite = GetComponent<SpriteRenderer>();
+            float flashSpeed = 4.0f * (1-(hp.RemainingHP / hp.MaxHP));
+            float color = (Mathf.Sin(2.0f * Mathf.PI * flashSpeed * Time.time) + 1.0f) / 2.0f;
+            playerSprite.color = new Color(1.0f, color, color);
+        }
+        else {
+            SpriteRenderer playerSprite = GetComponent<SpriteRenderer>();
+            playerSprite.color = new Color(1.0f, 1.0f, 1.0f);
+        }
     }
 
     void FixedUpdate()
     {
-        if (Time.time > WalkTime && moving)
-        {
-            WalkTime += footstepPeriod;
-            movingSound();
-        }
         if (!dashLogic.dashing && hp.alive)
         {
             float hSpeed = Input.GetAxis("Horizontal");
@@ -135,12 +133,10 @@ public class PlayerController : MonoBehaviour
             if (hSpeed == 0f && vSpeed == 0f)
             {
                 animator.SetBool("Moving", false);
-                moving = false;
             }
             else
             {
                 animator.SetBool("Moving", true);
-                moving = true;
             }
             if (hSpeed == 0f)
                 animator.SetInteger("X", 0);
@@ -152,6 +148,9 @@ public class PlayerController : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = corpse.gameObject.GetComponent<SpriteRenderer>().sprite;
             //           Instantiate(corpse, new Vector3(rb2d.gameObject.transform.position.x + 1f, rb2d.gameObject.transform.position.y - 0.7f, rb2d.gameObject.transform.position.z), Quaternion.identity);
             //   Die.exe;
+            //Scene thisScene = SceneManager.GetActiveScene();
+            //SceneManager.LoadScene(thisScene.name);
+
         }
     }
 
@@ -185,10 +184,5 @@ public class PlayerController : MonoBehaviour
     void shootBullet(Transform bulletType, Vector3 position, Quaternion rotation){
         var shooting = Instantiate(bulletType, position, rotation);
         shooting.tag = "PlayerAttack";
-    }
-
-    void movingSound()
-    {
-       SoundManager.instance.PlaySingle(footsteps);
     }
 }
