@@ -107,7 +107,6 @@ public class EnemyController : MonoBehaviour
                         markPlayer = false;
                     }
                 }
-
                 if (routine.GetAggro() || distance < agroDistance)
                 {
                     float angle = Mathf.Atan2(enemy_to_player.y, enemy_to_player.x);

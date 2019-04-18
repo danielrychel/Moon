@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 670678040}
   - component: {fileID: 670678041}
-  - component: {fileID: 4689842884918584715}
+  - component: {fileID: 4456534533237126494}
   m_Layer: 0
   m_Name: Explosion Radius
   m_TagString: Ethereal
@@ -48,7 +48,7 @@ CircleCollider2D:
   m_Offset: {x: -0.0042806864, y: 0}
   serializedVersion: 2
   m_Radius: 1.5145346
---- !u!114 &4689842884918584715
+--- !u!114 &4456534533237126494
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -208,6 +208,7 @@ MonoBehaviour:
   MaxHP: 5
   RemainingHP: 0
   rb2d: {fileID: 2991867501808357465}
+  uIController: {fileID: 0}
   alive: 1
 --- !u!114 &8074277045390238249
 MonoBehaviour:
