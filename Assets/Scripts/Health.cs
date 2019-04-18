@@ -23,6 +23,7 @@ public class Health : MonoBehaviour
         if (RemainingHP <= 0)
         {
             alive = false;
+            rb2d.isKinematic = false;
             if(uIController)
                 uIController.GameOver();
             Debug.Log("Killed!");
