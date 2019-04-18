@@ -7,12 +7,14 @@ public class PlayerSoundController : MonoBehaviour
     public AudioClip[] footsteps;
     public AudioClip[] takeDamage;
     public AudioClip[] firePistol;
+    public AudioClip[] fireShotgun;
 
-   // public static SoundManager instance = null;     //Allows other scripts to call functions from SoundManager.             
+    // public static SoundManager instance = null;     //Allows other scripts to call functions from SoundManager.             
 
     public AudioSource playerFS;
     public AudioSource playerGun;
     public AudioSource playerVoice;
+    public AudioSource playerShotgun;
 
     public float lowPitchRange = .95f;              //The lowest a sound effect will be randomly pitched.
     public float highPitchRange = 1.05f;            //The highest a sound effect will be randomly pitched.
@@ -54,10 +56,11 @@ public class PlayerSoundController : MonoBehaviour
 
     public void FirePistol()
     {
-        RandomizeSfx(firePistol, playerFS);
+        RandomizeSfx(firePistol, playerGun);
     }
+
     public void FireShotgun()
     {
-//        RandomizeSfx(fireShotgun, playerFS);
+        RandomizeSfx(fireShotgun, playerShotgun);
     }
 }
