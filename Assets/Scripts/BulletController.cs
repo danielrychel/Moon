@@ -25,11 +25,6 @@ public class BulletController : MonoBehaviour
 
         }
         distance += speed * Time.deltaTime * 2; 
-        /*if(distance >= 4 && transform.parent.name == "ShotgunBullet(Clone)"){
-            Destroy(transform.parent.gameObject);
-        }else if(distance >= 6 && transform.parent.name == "PistolBullet(Clone)"){
-            Destroy(transform.parent.gameObject);
-        }*/
         if(distance >= maxDistance)
         {
             Destroy(transform.parent.gameObject);
