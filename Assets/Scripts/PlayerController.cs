@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
                     case "Pistol1":
                         if(time > 15)
                         {
-                        //    gunGameObject.GetComponent<Animator>().SetTrigger("FirePistol");
+                            gunGameObject.GetComponent<Animator>().SetTrigger("FirePistol");
                             GetComponent<PlayerSoundController>().FirePistol();
                             shootBullet(bullet, gun.position, gun.rotation);
                             time = 0;
