@@ -146,7 +146,6 @@ public class BossController : MonoBehaviour
             {
                 shootingMG = false;
                 shootingTime = 0;
-                //spawnDrone();
             }
         } else
         {
