@@ -43,9 +43,12 @@ public class BulletController : MonoBehaviour
             if (collision.tag == "Killable")
             {
                 collision.gameObject.GetComponent<Health>().takeDamage(dmg);
-                if(transform.parent.name == "PistolBullet(Clone)"){
-                    collision.gameObject.GetComponent<EnemyController>().ReceiveStun();
-                    collision.gameObject.GetComponent<EnemyController>().KnockBack(transform.right);
+                EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+                if(enemy) {
+                    if(transform.parent.name == "PistolBullet(Clone)"){
+                        enemy.ReceiveStun();
+                        enemy.KnockBack(transform.right);
+                    }
                 }
             }
             Destroy(transform.parent.gameObject);
