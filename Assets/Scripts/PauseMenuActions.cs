@@ -21,11 +21,13 @@ public class PauseMenuActions : MonoBehaviour
 
     public void Pause() {
         gameObject.SetActive(true);
+        GameManager.instance.isStopped = true;
         Time.timeScale = 0.0f;
     }
 
     public void Resume() {
         gameObject.SetActive(false);
+        GameManager.instance.isStopped = false;
         Time.timeScale = 1.0f;
     }
 
@@ -35,10 +37,12 @@ public class PauseMenuActions : MonoBehaviour
     }
 
     public void RestartLevel() {
+        Time.timeScale = 1.0f;
         GameManager.instance.GetComponent<LevelManagement>().ResetLevel();
     }
 
     public void ExitMainMenu() {
+        Time.timeScale = 1.0f;
         GameManager.instance.GetComponent<LevelManagement>().ExitMainMenu();
     }
 }

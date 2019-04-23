@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         // rotate gun
-        if (hp.alive)
+        if (!GameManager.instance.isStopped)
         {
             Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mouseDelta = mouseWorld - gunPivot.position;
@@ -82,7 +82,7 @@ public class PlayerController : MonoBehaviour
                     case "Pistol1":
                         if(time > 15)
                         {
-                        //    gunGameObject.GetComponent<Animator>().SetTrigger("FirePistol");
+                            gunGameObject.GetComponent<Animator>().SetTrigger("FirePistol");
                             GetComponent<PlayerSoundController>().FirePistol();
                             shootBullet(bullet, gun.position, gun.rotation);
                             time = 0;
@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (!dashLogic.dashing && hp.alive)
+        if (!dashLogic.dashing && !GameManager.instance.isStopped)
         {
             float hSpeed = Input.GetAxis("Horizontal");
             float vSpeed = Input.GetAxis("Vertical");
@@ -182,7 +182,7 @@ public class PlayerController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (hp.alive)
+        if (!GameManager.instance.isStopped)
         {
             Debug.Log("Collision detected");
             if (collision.tag == "Killable" && dashLogic.frame == DashAbility.Frames.Damage)

@@ -15,10 +15,12 @@ public class death_screen : MonoBehaviour {
     }
 
     public void restart_level() {
+        Time.timeScale = 1.0f;
         GameManager.instance.GetComponent<LevelManagement>().ResetLevel();
     }
 
     public void to_main_menu() {
+        Time.timeScale = 1.0f;
         GameManager.instance.GetComponent<LevelManagement>().ExitMainMenu();
     }
 }

@@ -79,6 +79,7 @@ public class BossController : MonoBehaviour
                     }
                     //rb2d.transform.rotation = Quaternion.identity;
                     handleShooting();
+                    handleDrone();
                 }
             }
         }
@@ -114,10 +115,10 @@ public class BossController : MonoBehaviour
     private void aimGun(Transform gun, Transform gunPivot)
     {
         Vector2 player_vec = new Vector2(player.transform.position.x, player.transform.position.y);
-        //if (gun == pistol)
-        //{
-        //    player_vec += player.velocity / 8; //woww this makes it tough
-        //}
+        if (gun == pistol)
+        {
+            player_vec += player.velocity / 8; //woww this makes it tough
+        }
         Vector2 gun_vec = new Vector2(gun.transform.position.x, gun.transform.position.y);
         gun_vec = player_vec - gun_vec;
 
@@ -146,7 +147,6 @@ public class BossController : MonoBehaviour
             {
                 shootingMG = false;
                 shootingTime = 0;
-                //spawnDrone();
             }
         } else
         {
@@ -158,9 +158,15 @@ public class BossController : MonoBehaviour
         }
     }
 
-    private void spawnDrone()
+    private void handleDrone()
     {
-        Instantiate(drone, new Vector3(12, 40, 0), Quaternion.identity);
+        droneCooldown += 1;
+        if(droneCooldown > 500)
+        {
+            droneCooldown = 0;
+            Instantiate(drone, new Vector3(12, 40, 0), Quaternion.identity);
+        }
+        
     }
 
     private void tauntDeath()
