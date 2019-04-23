@@ -36,11 +36,18 @@ public class EnemyController : MonoBehaviour
 
     private bool stunned;
     private float stunTime;
+    private int stunCount;
+
+    private bool knockBacked;
+    private float knockBackTime;
+    private Vector2 knockBackDirection;
+
 
     void Start()
     {
         stunned = false;
         stunTime = 0;
+        stunCount = 0;
         rb2d = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player").GetComponent<Rigidbody2D>();
         routine.SetPatrol();
@@ -54,27 +61,51 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        if(stunned == true){
-            stunTime += Time.deltaTime;
-            print(stunTime);
-            if(stunTime >=1){
-                stunned = false;
-                stunTime = 0;
-            }
-        }
+        
 
     }
     public void ReceiveStun(){
-        print("received!!!!!!!!!!!!!!!!");
-        SetMoveTo(transform);
-        stunned = true;
+        stunCount++;
+        if (stunCount == 2)
+        {
+            SetMoveTo(transform);
+            stunned = true;
+            stunCount = 0;
+        }
+    }
+
+    public void KnockBack(Vector2 Direction){
+        knockBacked = true;
+        knockBackDirection = Direction;
+        print("KnockBack!!!!!!!!");
+
+
     }
 
     void FixedUpdate()
     {
         if (hp.alive)
         {
-            if (stunned == false)
+            if (stunned == true)
+            {
+                SetMoveTo(transform);
+                stunTime += Time.deltaTime;
+                if (stunTime >= 2)
+                {
+                    stunned = false;
+                    stunTime = 0;
+                }
+            }
+            if (knockBacked == true){
+                SetMoveTo(transform);
+                knockBackTime += Time.deltaTime;
+                transform.Translate(knockBackDirection * Time.deltaTime * 5);
+                if (knockBackTime >= 0.5){
+                    knockBackTime = 0;
+                    knockBacked = false;
+                }
+            }
+            if (stunned == false && knockBacked == false)
             {
                 Vector2 enemy_vec = new Vector2(rb2d.transform.position.x, rb2d.transform.position.y);
                 Vector2 player_vec = new Vector2(player.transform.position.x, player.transform.position.y);
