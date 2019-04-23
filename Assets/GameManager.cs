@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;     //Allows other scripts to call functions from SoundManager.
     [SerializeField] private MusicManager musicManager;
     public bool inCombat;
+    public bool isStopped;
     public GameObject player;
     [SerializeField] private int CombatCounter;
 
@@ -20,6 +21,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         CombatCounter = 0;
         inCombat = false;
+        isStopped = false;
     }
     void Update()
     {
