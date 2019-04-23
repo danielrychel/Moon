@@ -12789,7 +12789,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2d: {fileID: 449144906}
   player: {fileID: 2016614556}
-  lm: {fileID: 551388542842027332}
 --- !u!4 &449234637 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4925001517059558124, guid: 1dfd42a5414d24a83a39b5e1e3f21acf,
@@ -21251,26 +21250,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3286337813292664909, guid: ea87c84f8b9c8e0409c00c48a5f898e1,
-        type: 3}
-      propertyPath: OutOfCombatMusic.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3286337813292664909, guid: ea87c84f8b9c8e0409c00c48a5f898e1,
-        type: 3}
-      propertyPath: DeathMusic.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3286337813292664909, guid: ea87c84f8b9c8e0409c00c48a5f898e1,
-        type: 3}
-      propertyPath: OutOfCombatMusic.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: eb96293b0e5876346a6e1898a05be546, type: 3}
-    - target: {fileID: 3286337813292664909, guid: ea87c84f8b9c8e0409c00c48a5f898e1,
-        type: 3}
-      propertyPath: DeathMusic.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: e376ec4dffbe3c449adacdd24c9e9581, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea87c84f8b9c8e0409c00c48a5f898e1, type: 3}
 --- !u!1001 &780069779
