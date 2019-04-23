@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private MusicManager musicManager;
     public bool inCombat;
     private int CombatCounter;
+    public bool isStopped;
 
     void Awake()
     {
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         CombatCounter = 0;
         inCombat = false;
+        isStopped = false;
     }
     void Update()
     {
