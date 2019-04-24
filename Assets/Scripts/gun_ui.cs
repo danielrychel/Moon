@@ -21,10 +21,10 @@ public class gun_ui : MonoBehaviour
     {
         switch (player.guns[player.currentGun])
         {
-            case "pistol":
+            case "Pistol1":
                 gun_image.sprite = pistol;
                 break;
-            case "shotgun":
+            case "Shotgun1":
                 gun_image.sprite = shotgun;
                 break;
             default:
