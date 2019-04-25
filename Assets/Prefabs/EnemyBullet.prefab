@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7399816113521868450}
   - component: {fileID: 3453002077476666841}
   - component: {fileID: 6373007058688465233}
-  - component: {fileID: 5149678999712889425}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -47,9 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: add50346ed6e6e149b6f03f4baaa3993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 6
   dmg: 1
-  maxDistance: 10
+  maxDistance: 12
 --- !u!212 &7399816113521868450
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -67,7 +66,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: dbc0763afc061724f8fd8a0847eecd51, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,9 +83,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1410714319
-  m_SortingLayer: 3
-  m_SortingOrder: 12
+  m_SortingLayerID: -228963741
+  m_SortingLayer: 5
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 8795bc008352440a4ab78b650b039836, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -145,18 +144,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5149678999712889425
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5684969042614677359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 261e70028b84cd646a899670c824f11d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &7599300513433739069
 GameObject:
   m_ObjectHideFlags: 0

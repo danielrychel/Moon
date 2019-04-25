@@ -25,11 +25,6 @@ public class BulletController : MonoBehaviour
 
         }
         distance += speed * Time.deltaTime * 2; 
-        /*if(distance >= 4 && transform.parent.name == "ShotgunBullet(Clone)"){
-            Destroy(transform.parent.gameObject);
-        }else if(distance >= 6 && transform.parent.name == "PistolBullet(Clone)"){
-            Destroy(transform.parent.gameObject);
-        }*/
         if(distance >= maxDistance)
         {
             Destroy(transform.parent.gameObject);
@@ -43,12 +38,16 @@ public class BulletController : MonoBehaviour
             if (collision.tag == "Killable")
             {
                 collision.gameObject.GetComponent<Health>().takeDamage(dmg);
-                if(transform.parent.name == "PistolBullet(Clone)"){
-                    collision.gameObject.GetComponent<EnemyController>().ReceiveStun();
-                    collision.gameObject.GetComponent<EnemyController>().KnockBack(transform.right);
+                EnemyController enemy = collision.gameObject.GetComponent<EnemyController>();
+                if(enemy) {
+                    if(transform.parent.name == "PistolBullet(Clone)"){
+                        enemy.ReceiveStun();
+                        enemy.KnockBack(transform.right);
+                    }
                 }
             }
             Destroy(transform.parent.gameObject);
+
         }
         else if (collision.tag != "Killable" && transform.parent.tag == "EnemyAttack")
         {
