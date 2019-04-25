@@ -6,7 +6,7 @@ public class DroneController : MonoBehaviour
 {
     public float maxSpeed;
     public Health hp;
-    public Transform corpse;
+    public Transform explosion;
 
     private Rigidbody2D rb2d;
     private Rigidbody2D player;
@@ -51,7 +51,7 @@ public class DroneController : MonoBehaviour
         }
         else
         {
-            Instantiate(corpse, new Vector3(rb2d.gameObject.transform.position.x + 1f, rb2d.gameObject.transform.position.y - 0.7f, rb2d.gameObject.transform.position.z), Quaternion.identity);
+            Instantiate(explosion, rb2d.transform.position, Quaternion.identity);
             Destroy(rb2d.gameObject);
         }
     }

@@ -2974,6 +2974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261e70028b84cd646a899670c824f11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0
 --- !u!1 &280641670
 GameObject:
   m_ObjectHideFlags: 0
@@ -3119,7 +3120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: {fileID: 280641676}
-  corpse: {fileID: 6183641266302782330, guid: e322ecdc5b59ff54da8f9b1bb3cfd455, type: 3}
+  corpse: {fileID: 2557334301855689356, guid: a2fd8773aa8d9124186f5e4391b38715, type: 3}
   pistolBullet: {fileID: 3286294735871222309, guid: 5ecc7ced2eca6451d8fa73f72a5a29bf,
     type: 3}
   MGBullet: {fileID: 1422175819, guid: ded8bd10dbd087c4aa9a8ddc43b436fb, type: 3}
@@ -3129,6 +3130,8 @@ MonoBehaviour:
   machineGun: {fileID: 1594479383}
   drone: {fileID: 2991867501808357464, guid: 58bb4690722ede142862e9aaa20aa0eb, type: 3}
   door: {fileID: 257066943}
+  explosion: {fileID: 5082654568878365804, guid: 65a0d79748873e145836341579cc11fc,
+    type: 3}
 --- !u!114 &280641676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3141,7 +3144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d13897fa7c5b8499ca18e6e631f153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 70
+  MaxHP: 80
   RemainingHP: 0
   rb2d: {fileID: 280641674}
   uIController: {fileID: 0}
@@ -4803,7 +4806,7 @@ PrefabInstance:
     - target: {fileID: 3286337813227630527, guid: ea87c84f8b9c8e0409c00c48a5f898e1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3286337813227630527, guid: ea87c84f8b9c8e0409c00c48a5f898e1,
         type: 3}
@@ -14270,14 +14273,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 669785501, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
-      propertyPath: playerShotgun
-      value: 
-      objectReference: {fileID: 1345234029}
     - target: {fileID: 905770554, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 669785501, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
+      propertyPath: playerShotgun
+      value: 
+      objectReference: {fileID: 1345234029}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03, type: 3}
 --- !u!82 &1345234029 stripped
