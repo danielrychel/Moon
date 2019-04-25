@@ -57,10 +57,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 670678039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f095a5a456d41cb4b8ce8f36b3ad83ff, type: 3}
+  m_Script: {fileID: 11500000, guid: e4e04e419817844deb67109d40b14dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: 2
+  explosion: {fileID: 4671226840319715866, guid: 4c20738892c81224d8f20157528b09c6,
+    type: 3}
 --- !u!1 &2991867501808357469
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d13897fa7c5b8499ca18e6e631f153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 5
+  MaxHP: 2
   RemainingHP: 0
   rb2d: {fileID: 2991867501808357465}
   uIController: {fileID: 0}
@@ -235,6 +237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6853c7a50b20b4e4eb9674a2eb4bdce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
+  maxSpeed: 3
   hp: {fileID: 2991867501808357447}
   corpse: {fileID: 2068468610228230135, guid: 8eaef290c0628f548ba3bbb1c9030704, type: 3}

@@ -25,11 +25,6 @@ public class BulletController : MonoBehaviour
 
         }
         distance += speed * Time.deltaTime * 2; 
-        /*if(distance >= 4 && transform.parent.name == "ShotgunBullet(Clone)"){
-            Destroy(transform.parent.gameObject);
-        }else if(distance >= 6 && transform.parent.name == "PistolBullet(Clone)"){
-            Destroy(transform.parent.gameObject);
-        }*/
         if(distance >= maxDistance)
         {
             Destroy(transform.parent.gameObject);
@@ -38,6 +33,7 @@ public class BulletController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
+        //Debug.Log("Collision Tag = " + collision.tag + "\nTransform.parent Tag = " + transform.parent.tag);
         if (collision.tag != "Player" && collision.tag != "Ethereal" && transform.parent.tag == "PlayerAttack" && collision.tag!="Untagged") 
         {
             if (collision.tag == "Killable")
@@ -50,8 +46,9 @@ public class BulletController : MonoBehaviour
                         enemy.KnockBack(transform.right);
                     }
                 }
+                Destroy(transform.parent.gameObject);
             }
-            Destroy(transform.parent.gameObject);
+            
         }
         else if (collision.tag != "Killable" && transform.parent.tag == "EnemyAttack")
         {

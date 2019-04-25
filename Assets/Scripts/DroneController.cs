@@ -29,11 +29,21 @@ public class DroneController : MonoBehaviour
         {
             Vector2 drone_vec = new Vector2(rb2d.transform.position.x, rb2d.transform.position.y);
             Vector2 player_vec = new Vector2(player.transform.position.x, player.transform.position.y);
-            float distance = Mathf.Abs(Vector2.Distance(drone_vec, player_vec));
-            RaycastHit2D see = Physics2D.Linecast(drone_vec, player_vec); //check if the enemy can see the player
-            if (agroed || (see.transform.tag == "Player" && distance < 30))
+            if (!agroed)
             {
-                agroed = true;
+                Vector2 drone_to_player = player_vec - drone_vec;
+                float distance = drone_to_player.sqrMagnitude;
+                if(distance < 900)
+                {
+                    RaycastHit2D see = Physics2D.Linecast(drone_vec, player_vec); //check if the enemy can see the player
+                    if(see.transform.tag == "Player")
+                    {
+                        agroed = true;
+                    }
+                }
+            }
+            if (agroed)
+            {
                 drone_vec = player_vec - drone_vec;
                 drone_vec.Normalize();
                 rb2d.velocity = drone_vec * maxSpeed;
