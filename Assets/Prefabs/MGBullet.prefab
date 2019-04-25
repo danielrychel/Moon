@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  dmg: 0.5
+  dmg: 0.4
   maxDistance: 100
 --- !u!212 &1940769092
 SpriteRenderer:
