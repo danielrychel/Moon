@@ -66,6 +66,7 @@ MonoBehaviour:
   levels:
   - Level 1
   - Level 1 Boss
+  - Main Menu
 --- !u!1 &3286337813292664947
 GameObject:
   m_ObjectHideFlags: 0
