@@ -83,7 +83,7 @@ public class BossController : MonoBehaviour
         else if(!hp.alive)
         {
             Instantiate(explosion, rb2d.transform.position, Quaternion.identity);
-            Instantiate(corpse, rb2d.transform.position, Quaternion.Euler(0,0,14));
+            Instantiate(corpse, rb2d.transform.position, Quaternion.Euler(0,0,-10));
             Destroy(rb2d.gameObject);
             if(second_door == true)
             {
