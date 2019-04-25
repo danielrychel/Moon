@@ -3144,7 +3144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d13897fa7c5b8499ca18e6e631f153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 80
+  MaxHP: 5
   RemainingHP: 0
   rb2d: {fileID: 280641674}
   uIController: {fileID: 0}
@@ -20764,7 +20764,7 @@ PrefabInstance:
     - target: {fileID: 446084060526211031, guid: df80b2de1c9a24744a1c45a92c02aa6c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 446084060526211031, guid: df80b2de1c9a24744a1c45a92c02aa6c,
         type: 3}

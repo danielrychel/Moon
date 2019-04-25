@@ -440,7 +440,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 16160519}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 26, z: 0}
+  m_LocalPosition: {x: 0, y: 28, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1856397170}
@@ -3347,10 +3347,6 @@ PrefabInstance:
       propertyPath: detailedGizmos
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
     - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: alwaysDrawGizmos
@@ -3361,6 +3357,10 @@ PrefabInstance:
       propertyPath: constrainInsideGraph
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
 --- !u!1001 &168359688
@@ -14559,24 +14559,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029795, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: detailedGizmos
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
-    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
-        type: 3}
-      propertyPath: alwaysDrawGizmos
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
-        type: 3}
-      propertyPath: constrainInsideGraph
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6451590728446967258, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: PatrolRoute.Array.data[0]
@@ -14587,6 +14569,24 @@ PrefabInstance:
       propertyPath: PatrolRoute.Array.data[1]
       value: 
       objectReference: {fileID: 1167685709}
+    - target: {fileID: 1943029795, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: detailedGizmos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
+        type: 3}
+      propertyPath: alwaysDrawGizmos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
+        type: 3}
+      propertyPath: constrainInsideGraph
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
 --- !u!1001 &504830598
@@ -17409,24 +17409,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029795, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: detailedGizmos
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
-    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
-        type: 3}
-      propertyPath: alwaysDrawGizmos
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
-        type: 3}
-      propertyPath: constrainInsideGraph
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6451590728446967258, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: PatrolRoute.Array.data[0]
@@ -17437,6 +17419,24 @@ PrefabInstance:
       propertyPath: PatrolRoute.Array.data[1]
       value: 
       objectReference: {fileID: 883036666}
+    - target: {fileID: 1943029795, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: detailedGizmos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
+        type: 3}
+      propertyPath: alwaysDrawGizmos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
+        type: 3}
+      propertyPath: constrainInsideGraph
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
 --- !u!1001 &614615512
@@ -17934,24 +17934,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029795, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: detailedGizmos
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
-    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
-        type: 3}
-      propertyPath: alwaysDrawGizmos
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
-        type: 3}
-      propertyPath: constrainInsideGraph
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6451590728446967258, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: PatrolRoute.Array.data[0]
@@ -17962,6 +17944,24 @@ PrefabInstance:
       propertyPath: PatrolRoute.Array.data[1]
       value: 
       objectReference: {fileID: 606783694}
+    - target: {fileID: 1943029795, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: detailedGizmos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
+        type: 3}
+      propertyPath: alwaysDrawGizmos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
+        type: 3}
+      propertyPath: constrainInsideGraph
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
 --- !u!1001 &630827335
@@ -26637,11 +26637,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: electric_r
       objectReference: {fileID: 0}
-    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2016614556}
     - target: {fileID: 2730255001103494643, guid: 6c437dfef580f420aaca734af9d860c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -26697,6 +26692,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2016614556}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c437dfef580f420aaca734af9d860c3, type: 3}
 --- !u!1001 &1015952081
@@ -27066,24 +27066,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029795, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: detailedGizmos
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
-    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
-        type: 3}
-      propertyPath: alwaysDrawGizmos
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
-        type: 3}
-      propertyPath: constrainInsideGraph
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6451590728446967258, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: PatrolRoute.Array.size
@@ -27109,6 +27091,24 @@ PrefabInstance:
       propertyPath: PatrolRoute.Array.data[2]
       value: 
       objectReference: {fileID: 262123174}
+    - target: {fileID: 1943029795, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: detailedGizmos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
+        type: 3}
+      propertyPath: alwaysDrawGizmos
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
+        type: 3}
+      propertyPath: constrainInsideGraph
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
 --- !u!1 &1024768439
@@ -43534,10 +43534,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
     - target: {fileID: 6451590728446967258, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: PatrolRoute.Array.data[0]
@@ -43548,6 +43544,10 @@ PrefabInstance:
       propertyPath: PatrolRoute.Array.data[1]
       value: 
       objectReference: {fileID: 1594960520}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
 --- !u!4 &1604259484 stripped
@@ -43692,20 +43692,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
-    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
-        type: 3}
-      propertyPath: alwaysDrawGizmos
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
-        type: 3}
-      propertyPath: constrainInsideGraph
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6451590728446967258, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: PatrolRoute.Array.size
@@ -43731,6 +43717,20 @@ PrefabInstance:
       propertyPath: PatrolRoute.Array.data[2]
       value: 
       objectReference: {fileID: 1064103984}
+    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
+        type: 3}
+      propertyPath: alwaysDrawGizmos
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
+        type: 3}
+      propertyPath: constrainInsideGraph
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
 --- !u!1 &1612645480
@@ -43946,11 +43946,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: electric
       objectReference: {fileID: 0}
-    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2016614556}
     - target: {fileID: 2730255001103494643, guid: 6c437dfef580f420aaca734af9d860c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44011,6 +44006,11 @@ PrefabInstance:
       propertyPath: m_FlipX
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2016614556}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c437dfef580f420aaca734af9d860c3, type: 3}
 --- !u!1001 &1627256243
@@ -46530,10 +46530,6 @@ PrefabInstance:
       propertyPath: detailedGizmos
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
-      propertyPath: A
-      value: 
-      objectReference: {fileID: 34566630}
     - target: {fileID: 7788004879343467006, guid: d11f0aadb0584eb4ebaecc1707465498,
         type: 3}
       propertyPath: alwaysDrawGizmos
@@ -46544,6 +46540,10 @@ PrefabInstance:
       propertyPath: constrainInsideGraph
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1943029798, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 34566630}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d11f0aadb0584eb4ebaecc1707465498, type: 3}
 --- !u!1001 &1760003530
@@ -56029,11 +56029,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: electric_7
       objectReference: {fileID: 0}
-    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 2016614556}
     - target: {fileID: 2730255001103494643, guid: 6c437dfef580f420aaca734af9d860c3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -56089,6 +56084,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8078726684708830898, guid: 6c437dfef580f420aaca734af9d860c3,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2016614556}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c437dfef580f420aaca734af9d860c3, type: 3}
 --- !u!4 &2131455899 stripped
