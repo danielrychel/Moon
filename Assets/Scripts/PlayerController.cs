@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private Sprite pistol;
     private Animator pistolAnim, shotgunAnim;
     private SpriteRenderer spriteRenderer;
+
+    public bool lookR;
     public string[] guns = new string[2];
     public int currentGun = 0;
 
@@ -40,6 +42,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Start() {
+        lookR = true;
         rb2d = GetComponent<Rigidbody2D>();
         dashLogic = GetComponent<DashAbility>();
         gunGameObject = gun.gameObject;
@@ -66,8 +69,18 @@ public class PlayerController : MonoBehaviour
 
             if(angle > 1.5 || angle < -1.5){
                 spriteRenderer.flipY = true;
-            }else{
+                //lookR = true;
+                animator.SetBool("LookR", false);
+                animator.SetBool("RLLR", false);
+                animator.SetBool("RRLL", true);
+            }
+            else
+            {
                 spriteRenderer.flipY = false;
+                //lookR = false;
+                animator.SetBool("LookR", true);
+                animator.SetBool("RLLR", false);
+                animator.SetBool("RRLL", true);
             }
 
             // translate camera
