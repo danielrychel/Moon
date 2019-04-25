@@ -5,9 +5,11 @@ using UnityEngine;
 public class StartBossMusic : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        GameManager.instance.CombatCounter = 0;
         GameManager.instance.isBoss = true;
+        GameManager.instance.SetBoss();
     }
 
     // Update is called once per frame
