@@ -59,6 +59,13 @@ public class MusicManager : MonoBehaviour
                     musicInPlay = true;
                 }
                 break;
+            case MusicState.Boss:
+                if (!musicInPlay)
+                {
+                    SoundManager.instance.PlayMusic(BossMusic[0]);
+                    musicInPlay = true;
+                }
+                break;
         }   
     }
 

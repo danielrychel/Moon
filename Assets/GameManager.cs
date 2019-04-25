@@ -87,7 +87,9 @@ public class GameManager : MonoBehaviour
 
     private void SetBoss()
     {
-        musicManager.current_music = MusicManager.MusicState.Boss;
+        if (MusicManager.MusicState.Boss == musicManager.current_music) return;
+        musicManager.FadeMusic();
+        musicManager.next_music = MusicManager.MusicState.Boss;
     }
 
     private void SetDeath()

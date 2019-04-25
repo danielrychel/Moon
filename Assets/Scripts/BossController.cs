@@ -56,12 +56,12 @@ public class BossController : MonoBehaviour
             if (!agroed)
             {
                 float distance = enemy_to_player.sqrMagnitude;
-                if(distance < 100)
+                if(distance < 126)
                 {
                     agroed = true;
                     if(first_door == false)
                     {
-                        Instantiate(door, new Vector3(0, 26, 0), Quaternion.identity);
+                        Instantiate(door, new Vector3(0, 25, 0), Quaternion.identity);
                         first_door = true;
                     }
                 }

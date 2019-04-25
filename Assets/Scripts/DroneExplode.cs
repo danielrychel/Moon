@@ -9,6 +9,8 @@ public class DroneExplode : MonoBehaviour
     public int dmg;
     public Transform explosion;
 
+    public AudioClip explosionSound;
+
     private bool destroy;
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -16,6 +18,7 @@ public class DroneExplode : MonoBehaviour
         if (collision.tag == "Player")
         {
             destroy = true;
+            SoundManager.instance.PlaySingle(explosionSound);
             SelfDestruct(collision);
         }
     }
