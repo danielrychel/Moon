@@ -8,8 +8,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private MusicManager musicManager;
     public bool inCombat;
     public bool isStopped;
+    public bool isBoss;
     public GameObject player;
-    [SerializeField] private int CombatCounter;
+    [SerializeField] public int CombatCounter;
 
     void Awake()
     {
@@ -30,11 +31,11 @@ public class GameManager : MonoBehaviour
             if (CombatCounter > 0) inCombat = true;
             else inCombat = false;
 
-            if (inCombat & player.GetComponent<Health>().alive)
+            if (inCombat & !isBoss & player.GetComponent<Health>().alive)
             {
                 SetCombat();
             }
-            else if (player.GetComponent<Health>().alive)
+            else if (player.GetComponent<Health>().alive & !isBoss)
             {
                 ExitCombat();
             }
@@ -44,12 +45,20 @@ public class GameManager : MonoBehaviour
                 SetDeath();
                 CombatCounter = 0;
             }
+
+            //if (isBoss)
+            //{
+            //    CombatCounter = 0;
+            //    ExitCombat();
+            //    SetBoss();
+            //}
             
             if (MusicManager.MusicState.Death == musicManager.current_music && player.GetComponent<Health>().alive)
             {
                 CombatCounter = 0;
                 ExitCombat();
             }
+
         }
         else
         {
@@ -85,7 +94,7 @@ public class GameManager : MonoBehaviour
         musicManager.next_music = MusicManager.MusicState.OutOfCombat;
     }
 
-    private void SetBoss()
+    public void SetBoss()
     {
         if (MusicManager.MusicState.Boss == musicManager.current_music) return;
         musicManager.FadeMusic();

@@ -63,6 +63,7 @@ MonoBehaviour:
   dmg: 4
   explosion: {fileID: 4671226840319715866, guid: 4c20738892c81224d8f20157528b09c6,
     type: 3}
+  explosionSound: {fileID: 8300000, guid: 54a2a0e379b87cd40bec2d23e9e6a4fb, type: 3}
 --- !u!1 &2991867501808357469
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,3 +242,4 @@ MonoBehaviour:
   hp: {fileID: 2991867501808357447}
   explosion: {fileID: 4671226840319715866, guid: 4c20738892c81224d8f20157528b09c6,
     type: 3}
+  explosionSound: {fileID: 8300000, guid: 457fd3588a88a754685be5bd0b53b6f3, type: 3}

@@ -59,7 +59,7 @@ public class MusicManager : MonoBehaviour
                     musicInPlay = true;
                 }
                 break;
-            case MusicState.Boss:
+            case MusicState.Boss :
                 if (!musicInPlay)
                 {
                     SoundManager.instance.PlayMusic(BossMusic[0]);

@@ -7,6 +7,7 @@ public class DroneController : MonoBehaviour
     public float maxSpeed;
     public Health hp;
     public Transform explosion;
+    public AudioClip explosionSound;
 
     private Rigidbody2D rb2d;
     private Rigidbody2D player;
@@ -51,6 +52,7 @@ public class DroneController : MonoBehaviour
         }
         else
         {
+            SoundManager.instance.PlaySingle(explosionSound);
             Instantiate(explosion, rb2d.transform.position, Quaternion.identity);
             Destroy(rb2d.gameObject);
         }
