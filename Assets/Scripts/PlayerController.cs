@@ -201,7 +201,7 @@ public class PlayerController : MonoBehaviour
                 if (collision.gameObject.GetComponent<Health>().takeDamage(swordDmg))
                 {
                     dashLogic.setKilled();
-                    hp.takeHeal(1);
+                    hp.takeHeal(2);
                 }
                 Debug.Log("Contact");
             }
