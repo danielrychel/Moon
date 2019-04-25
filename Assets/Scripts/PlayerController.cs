@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,13 +8,12 @@ public class PlayerController : MonoBehaviour
     public Transform gunPivot;
     public Transform gun;
     public Transform corpse;
-    public GameObject gunGameObject;
+    private GameObject gunGameObject;
 
-    public Sprite shotgun;
-    public Sprite pistol;
-    public Animator pistolAnim, shotgunAnim;
-    public Animator GunAnimator;
-    public SpriteRenderer spriteRenderer;
+    private Sprite shotgun;
+    private Sprite pistol;
+    private Animator pistolAnim, shotgunAnim;
+    private SpriteRenderer spriteRenderer;
     public string[] guns = new string[2];
     public int currentGun = 0;
 
