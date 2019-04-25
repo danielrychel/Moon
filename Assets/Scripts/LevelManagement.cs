@@ -44,6 +44,10 @@ public class LevelManagement : MonoBehaviour
     public void NextLevel() {
         currentLevel++;
         SceneManager.LoadScene(levels[currentLevel]);
+        //if(currentLevel == 2)
+        //{
+        //    GameManager.instance.SetBoss();
+        //}
         GameManager.instance.isStopped = false;
     }
 

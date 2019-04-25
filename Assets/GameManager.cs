@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private MusicManager musicManager;
     public bool inCombat;
     public bool isStopped;
+    public bool isBoss;
     public GameObject player;
     [SerializeField] private int CombatCounter;
 
@@ -44,12 +45,20 @@ public class GameManager : MonoBehaviour
                 SetDeath();
                 CombatCounter = 0;
             }
+
+            if (isBoss)
+            {
+                CombatCounter = 0;
+                ExitCombat();
+                SetBoss();
+            }
             
             if (MusicManager.MusicState.Death == musicManager.current_music && player.GetComponent<Health>().alive)
             {
                 CombatCounter = 0;
                 ExitCombat();
             }
+
         }
         else
         {

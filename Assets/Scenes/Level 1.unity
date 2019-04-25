@@ -21206,6 +21206,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3286337813292664909, guid: ea87c84f8b9c8e0409c00c48a5f898e1,
+        type: 3}
+      propertyPath: BossMusic.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286337813292664909, guid: ea87c84f8b9c8e0409c00c48a5f898e1,
+        type: 3}
+      propertyPath: BossMusic.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 998862812f56bb7479e97fa63685a6e1, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea87c84f8b9c8e0409c00c48a5f898e1, type: 3}
 --- !u!1001 &780069779
@@ -32671,16 +32681,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 254479785}
     m_Modifications:
-    - target: {fileID: 6183641266302782276, guid: e322ecdc5b59ff54da8f9b1bb3cfd455,
-        type: 3}
-      propertyPath: m_Name
-      value: Corpse
-      objectReference: {fileID: 0}
-    - target: {fileID: 6183641266302782276, guid: e322ecdc5b59ff54da8f9b1bb3cfd455,
-        type: 3}
-      propertyPath: m_TagString
-      value: Floor
-      objectReference: {fileID: 0}
     - target: {fileID: 6183641266302782330, guid: e322ecdc5b59ff54da8f9b1bb3cfd455,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -32735,6 +32735,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183641266302782276, guid: e322ecdc5b59ff54da8f9b1bb3cfd455,
+        type: 3}
+      propertyPath: m_Name
+      value: Corpse
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183641266302782276, guid: e322ecdc5b59ff54da8f9b1bb3cfd455,
+        type: 3}
+      propertyPath: m_TagString
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 6183641266302782277, guid: e322ecdc5b59ff54da8f9b1bb3cfd455,
         type: 3}
@@ -38879,12 +38889,12 @@ PrefabInstance:
     - target: {fileID: 988374602731329546, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3
+      value: 17.6
       objectReference: {fileID: 0}
     - target: {fileID: 988374602731329546, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.23
+      value: 9.1
       objectReference: {fileID: 0}
     - target: {fileID: 988374602731329546, guid: 4b2c97a6f6f0a564d8e3d50b05d58f03,
         type: 3}
@@ -49891,11 +49901,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 254479785}
     m_Modifications:
-    - target: {fileID: 2932382477473912115, guid: 2e82772f17f8ca94d9d63d0474c739e6,
-        type: 3}
-      propertyPath: m_Name
-      value: Blood
-      objectReference: {fileID: 0}
     - target: {fileID: 2932382477473912114, guid: 2e82772f17f8ca94d9d63d0474c739e6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -49950,6 +49955,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2932382477473912115, guid: 2e82772f17f8ca94d9d63d0474c739e6,
+        type: 3}
+      propertyPath: m_Name
+      value: Blood
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e82772f17f8ca94d9d63d0474c739e6, type: 3}
