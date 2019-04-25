@@ -239,4 +239,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 3
   hp: {fileID: 2991867501808357447}
-  corpse: {fileID: 2068468610228230135, guid: 8eaef290c0628f548ba3bbb1c9030704, type: 3}
+  explosion: {fileID: 4671226840319715866, guid: 4c20738892c81224d8f20157528b09c6,
+    type: 3}
