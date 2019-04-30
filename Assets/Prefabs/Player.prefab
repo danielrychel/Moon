@@ -695,7 +695,7 @@ MonoBehaviour:
   currentGun: 0
   camDistance: 2
   cam: {fileID: 988374602624477086}
-  swordDmg: 3
+  swordDmg: 33
   colDmg: 0
   hp: {fileID: 988374602731329588}
   bullet: {fileID: 3286294735871222309, guid: 0cf6bbfc1cae1b3408a9bbd3d51c091e, type: 3}
@@ -835,7 +835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d13897fa7c5b8499ca18e6e631f153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 10
+  MaxHP: 100
   RemainingHP: 0
   rb2d: {fileID: 988374602731329544}
   uIController: {fileID: 0}
