@@ -114,8 +114,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 100, y: 100}
-  m_SizeDelta: {x: 148, y: 148}
+  m_AnchoredPosition: {x: 164.90039, y: 100.40039}
+  m_SizeDelta: {x: 277.8, y: 147.19}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3962000768173197219
 CanvasRenderer:
@@ -169,8 +169,8 @@ MonoBehaviour:
   gun_objects: []
   player: {fileID: 0}
   gun_image: {fileID: 3962000768173197218}
-  pistol: {fileID: 21300000, guid: db7a4e008174e654d8e4a8dd6472836f, type: 3}
-  shotgun: {fileID: 21300000, guid: 64d0ad02fee9e4d63b41dffda57a6996, type: 3}
+  pistol: {fileID: 21300000, guid: 0b7fa257dec7281439deb7156798a305, type: 3}
+  shotgun: {fileID: 21300000, guid: 21c47b4382295e2499cb7fe66a724a4f, type: 3}
 --- !u!1 &3962000768601143271
 GameObject:
   m_ObjectHideFlags: 0
