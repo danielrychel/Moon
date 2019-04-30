@@ -37,7 +37,7 @@ public class Health : MonoBehaviour
 
     public void takeHeal(float heal)
     {
-        if ((RemainingHP += heal) > MaxHP)
+        if ((RemainingHP + heal) > MaxHP)
             RemainingHP = MaxHP;
         else
             RemainingHP += heal;

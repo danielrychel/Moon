@@ -8,8 +8,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private MusicManager musicManager;
     public bool inCombat;
     public bool isStopped;
+    public bool isBoss;
+    public bool isMenu;
     public GameObject player;
-    [SerializeField] private int CombatCounter;
+    [SerializeField] public int CombatCounter;
 
     void Awake()
     {
@@ -30,11 +32,11 @@ public class GameManager : MonoBehaviour
             if (CombatCounter > 0) inCombat = true;
             else inCombat = false;
 
-            if (inCombat & player.GetComponent<Health>().alive)
+            if (inCombat & !isBoss & player.GetComponent<Health>().alive)
             {
                 SetCombat();
             }
-            else if (player.GetComponent<Health>().alive)
+            else if (player.GetComponent<Health>().alive & !isBoss)
             {
                 ExitCombat();
             }
@@ -43,17 +45,22 @@ public class GameManager : MonoBehaviour
             {
                 SetDeath();
                 CombatCounter = 0;
-            }
-            
+            }            
             if (MusicManager.MusicState.Death == musicManager.current_music && player.GetComponent<Health>().alive)
             {
                 CombatCounter = 0;
                 ExitCombat();
             }
+
         }
         else
         {
             player = GameObject.FindWithTag("Player");
+        }
+        if(player == null)
+        {
+            //Main Menu
+            SetMenu();
         }
 
     }
@@ -85,7 +92,7 @@ public class GameManager : MonoBehaviour
         musicManager.next_music = MusicManager.MusicState.OutOfCombat;
     }
 
-    private void SetBoss()
+    public void SetBoss()
     {
         if (MusicManager.MusicState.Boss == musicManager.current_music) return;
         musicManager.FadeMusic();
@@ -97,5 +104,13 @@ public class GameManager : MonoBehaviour
         if (MusicManager.MusicState.Death == musicManager.current_music) return;
         musicManager.FadeMusic();
         musicManager.next_music = MusicManager.MusicState.Death;
+    }
+
+
+    private void SetMenu()
+    {
+        if (MusicManager.MusicState.Menu == musicManager.current_music) return;
+        musicManager.FadeMusic();
+        musicManager.next_music = MusicManager.MusicState.Menu;
     }
 }

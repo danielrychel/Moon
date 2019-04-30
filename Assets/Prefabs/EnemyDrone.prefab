@@ -47,7 +47,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.0042806864, y: 0}
   serializedVersion: 2
-  m_Radius: 1.5145346
+  m_Radius: 1
 --- !u!114 &4989412019457830192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,12 +57,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 670678039}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b91d2be4d8e2ef4b8c96afd06f0ddcf, type: 3}
+  m_Script: {fileID: 11500000, guid: f2c76fa07167f4ebd8a27614fbdf10d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 4
+  dmg: 80
   explosion: {fileID: 4671226840319715866, guid: 4c20738892c81224d8f20157528b09c6,
     type: 3}
+  explosionSound: {fileID: 8300000, guid: 54a2a0e379b87cd40bec2d23e9e6a4fb, type: 3}
 --- !u!1 &2991867501808357469
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d13897fa7c5b8499ca18e6e631f153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 2
+  MaxHP: 20
   RemainingHP: 0
   rb2d: {fileID: 2991867501808357465}
   uIController: {fileID: 0}
@@ -237,7 +238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6853c7a50b20b4e4eb9674a2eb4bdce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 3
+  maxSpeed: 6
   hp: {fileID: 2991867501808357447}
   explosion: {fileID: 4671226840319715866, guid: 4c20738892c81224d8f20157528b09c6,
     type: 3}
+  explosionSound: {fileID: 8300000, guid: 457fd3588a88a754685be5bd0b53b6f3, type: 3}
