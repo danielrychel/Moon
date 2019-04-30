@@ -6,6 +6,7 @@ public class DoorTutorial : MonoBehaviour
 {
     public door_control door;
     public GameObject tutorial;
+    public float range;
 
     // Start is called before the first frame update
     void Start()
@@ -16,7 +17,7 @@ public class DoorTutorial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(door.getDistanceSqr() <= 25 && !door.switched) {
+        if(door.getDistanceSqr() <= range*range && !door.switched) {
             tutorial.SetActive(true);
         }
         else {
