@@ -17,14 +17,8 @@ public class door_control : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        Vector2 control_vec = new Vector2(rb2d.transform.position.x, rb2d.transform.position.y);
-        Vector2 player_vec = new Vector2(player.transform.position.x, player.transform.position.y);
-        Vector2 controls_to_player = player_vec - control_vec;
-        float distance = controls_to_player.sqrMagnitude;
-
-        if (distance <= 9)
+    void Update() {
+        if (getDistanceSqr() <= 9)
         {
             sprite.color = new Color(0.8f, 0.5f, 1f, 0.9f);
             if (Input.GetKeyDown("e"))
@@ -36,5 +30,12 @@ public class door_control : MonoBehaviour
         {
             sprite.color = orig_color;
         }
+    }
+
+    public float getDistanceSqr() {
+        Vector2 control_vec = new Vector2(rb2d.transform.position.x, rb2d.transform.position.y);
+        Vector2 player_vec = new Vector2(player.transform.position.x, player.transform.position.y);
+        Vector2 controls_to_player = player_vec - control_vec;
+        return controls_to_player.sqrMagnitude;
     }
 }
