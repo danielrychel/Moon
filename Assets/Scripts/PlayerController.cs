@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -9,13 +8,14 @@ public class PlayerController : MonoBehaviour
     public Transform gunPivot;
     public Transform gun;
     public Transform corpse;
-    public GameObject gunGameObject;
+    private GameObject gunGameObject;
 
-    public Sprite shotgun;
-    public Sprite pistol;
-    public Animator pistolAnim, shotgunAnim;
-    public Animator GunAnimator;
-    public SpriteRenderer spriteRenderer;
+    private Sprite shotgun;
+    private Sprite pistol;
+    private Animator pistolAnim, shotgunAnim;
+    private SpriteRenderer spriteRenderer;
+
+    public bool lookR;
     public string[] guns = new string[2];
     public int currentGun = 0;
 
@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Start() {
+        lookR = true;
         rb2d = GetComponent<Rigidbody2D>();
         dashLogic = GetComponent<DashAbility>();
         gunGameObject = gun.gameObject;
@@ -68,8 +69,18 @@ public class PlayerController : MonoBehaviour
 
             if(angle > 1.5 || angle < -1.5){
                 spriteRenderer.flipY = true;
-            }else{
+                //lookR = true;
+                animator.SetBool("LookR", false);
+                animator.SetBool("RLLR", false);
+                animator.SetBool("RRLL", true);
+            }
+            else
+            {
                 spriteRenderer.flipY = false;
+                //lookR = false;
+                animator.SetBool("LookR", true);
+                animator.SetBool("RLLR", false);
+                animator.SetBool("RRLL", true);
             }
 
             // translate camera
@@ -190,7 +201,7 @@ public class PlayerController : MonoBehaviour
                 if (collision.gameObject.GetComponent<Health>().takeDamage(swordDmg))
                 {
                     dashLogic.setKilled();
-                    hp.takeHeal(1);
+                    hp.takeHeal(2);
                 }
                 Debug.Log("Contact");
             }

@@ -61,7 +61,16 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        
+        if((hp.RemainingHP / hp.MaxHP) < 0.75) {
+            SpriteRenderer playerSprite = GetComponent<SpriteRenderer>();
+            float flashSpeed = 4.0f * (1-(hp.RemainingHP / hp.MaxHP));
+            float color = (Mathf.Sin(2.0f * Mathf.PI * flashSpeed * Time.time) + 1.0f) / 2.0f;
+            playerSprite.color = new Color(1.0f, color, color);
+        }
+        else {
+            SpriteRenderer playerSprite = GetComponent<SpriteRenderer>();
+            playerSprite.color = new Color(1.0f, 1.0f, 1.0f);
+        }
 
     }
     public void ReceiveStun(){

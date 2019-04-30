@@ -16,6 +16,7 @@ public class BossController : MonoBehaviour
     public Transform machineGun;
     public Transform drone;
     public Transform door;
+    public Transform explosion;
 
     private Rigidbody2D rb2d;
     private Rigidbody2D player;
@@ -55,12 +56,12 @@ public class BossController : MonoBehaviour
             if (!agroed)
             {
                 float distance = enemy_to_player.sqrMagnitude;
-                if(distance < 100)
+                if(distance < 126)
                 {
                     agroed = true;
                     if(first_door == false)
                     {
-                        Instantiate(door, new Vector3(0, 26, 0), Quaternion.identity);
+                        Instantiate(door, new Vector3(0, 25, 0), Quaternion.identity);
                         first_door = true;
                     }
                 }
@@ -69,23 +70,20 @@ public class BossController : MonoBehaviour
             {
                 aimGun(machineGun, MGPivot);
                 aimGun(pistol, pistolPivot);
-                RaycastHit2D hit = Physics2D.Linecast(pistol.position, player_vec); //check if the enemy can see the player
-                if (hit.transform.tag == "Player") 
-                { 
-                    if(shootingMG == false) //Only move when the machine gun isn't shooting
-                    {
-                        enemy_to_player.Normalize();
-                        rb2d.velocity = enemy_to_player * maxSpeed;
-                    }
-                    //rb2d.transform.rotation = Quaternion.identity;
-                    handleShooting();
-                    handleDrone();
+                if(shootingMG == false) //Only move when the machine gun isn't shooting
+                {
+                    enemy_to_player.Normalize();
+                    rb2d.velocity = enemy_to_player * maxSpeed;
                 }
+                //rb2d.transform.rotation = Quaternion.identity;
+                handleShooting();
+                handleDrone();
             }
         }
         else if(!hp.alive)
         {
-            Instantiate(corpse, new Vector3(rb2d.gameObject.transform.position.x + 1f, rb2d.gameObject.transform.position.y - 0.7f, rb2d.gameObject.transform.position.z), Quaternion.identity);
+            Instantiate(explosion, rb2d.transform.position, Quaternion.identity);
+            Instantiate(corpse, rb2d.transform.position, Quaternion.Euler(0,0,-10));
             Destroy(rb2d.gameObject);
             if(second_door == true)
             {
@@ -161,7 +159,7 @@ public class BossController : MonoBehaviour
     private void handleDrone()
     {
         droneCooldown += 1;
-        if(droneCooldown > 500)
+        if(droneCooldown > 1000)
         {
             droneCooldown = 0;
             Instantiate(drone, new Vector3(12, 40, 0), Quaternion.identity);

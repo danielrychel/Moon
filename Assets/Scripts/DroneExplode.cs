@@ -7,6 +7,9 @@ public class DroneExplode : MonoBehaviour
     // Start is called before the first frame update
 
     public int dmg;
+    public Transform explosion;
+
+    public AudioClip explosionSound;
 
     private bool destroy;
 
@@ -15,6 +18,7 @@ public class DroneExplode : MonoBehaviour
         if (collision.tag == "Player")
         {
             destroy = true;
+            SoundManager.instance.PlaySingle(explosionSound);
             SelfDestruct(collision);
         }
     }
@@ -32,6 +36,8 @@ public class DroneExplode : MonoBehaviour
         transform.parent.transform.Rotate(new Vector3(90, 0, 0), Space.World);
         transform.parent.transform.Rotate(new Vector3(40, 0, 0), Space.World);
         transform.parent.transform.Rotate(new Vector3(20, 0, 0), Space.World);
+
+        Instantiate(explosion, transform.position, Quaternion.identity);
 
         if (!destroy) return;
 

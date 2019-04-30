@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicManager: {fileID: 3286337813292664909}
   inCombat: 0
+  isStopped: 0
+  isBoss: 0
   player: {fileID: 0}
   CombatCounter: 0
 --- !u!114 &551388542842027332
@@ -61,6 +63,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72161f2ce48cff5409bab06e20ba482e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levels:
+  - Level 1
+  - Level 1 Boss
+  - Main Menu
 --- !u!1 &3286337813292664947
 GameObject:
   m_ObjectHideFlags: 0
@@ -110,6 +116,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: eb96293b0e5876346a6e1898a05be546, type: 3}
   DeathMusic:
   - {fileID: 8300000, guid: e376ec4dffbe3c449adacdd24c9e9581, type: 3}
-  BossMusic: []
+  BossMusic:
+  - {fileID: 8300000, guid: 998862812f56bb7479e97fa63685a6e1, type: 3}
   current_music: 0
   next_music: 0

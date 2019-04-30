@@ -60,7 +60,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f095a5a456d41cb4b8ce8f36b3ad83ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dmg: 2
+  dmg: 4
+  explosion: {fileID: 4671226840319715866, guid: 4c20738892c81224d8f20157528b09c6,
+    type: 3}
+  explosionSound: {fileID: 8300000, guid: 54a2a0e379b87cd40bec2d23e9e6a4fb, type: 3}
 --- !u!1 &2991867501808357469
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +139,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: dbc0763afc061724f8fd8a0847eecd51, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -155,7 +158,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1410714319
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9359cb9d48add0d4595351034dad729f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -205,7 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39d13897fa7c5b8499ca18e6e631f153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHP: 5
+  MaxHP: 2
   RemainingHP: 0
   rb2d: {fileID: 2991867501808357465}
   uIController: {fileID: 0}
@@ -222,6 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 261e70028b84cd646a899670c824f11d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: 0
 --- !u!114 &7875609192288157058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,6 +238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6853c7a50b20b4e4eb9674a2eb4bdce1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 5
+  maxSpeed: 3
   hp: {fileID: 2991867501808357447}
-  corpse: {fileID: 2068468610228230135, guid: 8eaef290c0628f548ba3bbb1c9030704, type: 3}
+  explosion: {fileID: 4671226840319715866, guid: 4c20738892c81224d8f20157528b09c6,
+    type: 3}
+  explosionSound: {fileID: 8300000, guid: 457fd3588a88a754685be5bd0b53b6f3, type: 3}
