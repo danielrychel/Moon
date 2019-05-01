@@ -669,6 +669,32 @@ PrefabInstance:
       propertyPath: optionsMenu
       value: 
       objectReference: {fileID: 1376907864}
+    - target: {fileID: 4791320245822160786, guid: b103604c4fc9fac4a8fdf4e4416b0e69,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8087cb08b4c114dfaaa67de4ab76e947,
+        type: 3}
+    - target: {fileID: 4791320245822160786, guid: b103604c4fc9fac4a8fdf4e4416b0e69,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791320245822160786, guid: b103604c4fc9fac4a8fdf4e4416b0e69,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.504
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791320245822160786, guid: b103604c4fc9fac4a8fdf4e4416b0e69,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.517
+      objectReference: {fileID: 0}
+    - target: {fileID: 4791320245822160786, guid: b103604c4fc9fac4a8fdf4e4416b0e69,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.615
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b103604c4fc9fac4a8fdf4e4416b0e69, type: 3}
 --- !u!1001 &7782622022070345138
