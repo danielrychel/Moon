@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
                         }
                         break;
                     case "Shotgun1":
-                        if(time > 70)
+                        if(time > 90)
                         {
                             gunGameObject.GetComponent<Animator>().SetTrigger("FireShotgun");
                             GetComponent<PlayerSoundController>().FireShotgun();
@@ -201,7 +201,7 @@ public class PlayerController : MonoBehaviour
                 if (collision.gameObject.GetComponent<Health>().takeDamage(swordDmg))
                 {
                     dashLogic.setKilled();
-                    hp.takeHeal(2);
+                    hp.takeHeal(35);
                 }
                 Debug.Log("Contact");
             }
