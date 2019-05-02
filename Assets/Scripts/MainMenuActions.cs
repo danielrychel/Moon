@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuActions : MonoBehaviour
-{
+public class MainMenuActions : MonoBehaviour {
     public GameObject optionsMenu;
+    public GameObject levelSelect;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,8 @@ public class MainMenuActions : MonoBehaviour
     }
 
     public void StartGame() {
-        GameManager.instance.GetComponent<LevelManagement>().NextLevel();
+        levelSelect.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     public void OpenOptions() {
