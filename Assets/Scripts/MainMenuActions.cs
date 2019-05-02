@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuActions : MonoBehaviour {
     public GameObject optionsMenu;
+    public GameObject controlsMenu;
     public GameObject levelSelect;
 
     // Start is called before the first frame update
@@ -26,6 +27,11 @@ public class MainMenuActions : MonoBehaviour {
 
     public void OpenOptions() {
         optionsMenu.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
+    public void OpenControls() {
+        controlsMenu.SetActive(true);
         gameObject.SetActive(false);
     }
 

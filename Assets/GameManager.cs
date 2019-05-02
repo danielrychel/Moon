@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     [SerializeField] public int CombatCounter;
     public bool useKeyboard;
+    public int tutorial;
 
     void Awake()
     {
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
         inCombat = false;
         isStopped = false;
         useKeyboard = true;
+        tutorial = 0;
     }
     void Update()
     {

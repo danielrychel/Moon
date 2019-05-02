@@ -8,7 +8,9 @@ public class DoorTutorial : MonoBehaviour
     public door_control door;
     public GameObject tutorial;
     public float range;
-    public Text tut;
+    public Image prompt;
+    public Sprite keyboard;
+    public Sprite joystick;
 
     // Start is called before the first frame update
     void Start()
@@ -27,8 +29,8 @@ public class DoorTutorial : MonoBehaviour
         }
 
         if(GameManager.instance.useKeyboard)
-            tut.text = "Press E";
+            prompt.sprite = keyboard;
         else
-            tut.text = "Press A";
+            prompt.sprite = joystick;
     }
 }
