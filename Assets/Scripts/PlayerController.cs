@@ -215,12 +215,13 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Collision detected");
             if (collision.tag == "Killable" && dashLogic.frame == DashAbility.Frames.Damage)
             {
-                if (collision.gameObject.GetComponent<Health>().takeDamage(swordDmg))
-                {
-                    dashLogic.setKilled();
-                    hp.takeHeal(35);
+                if(collision.isTrigger) {
+                    if(collision.gameObject.GetComponent<Health>().takeDamage(swordDmg)) {
+                        dashLogic.setKilled();
+                        hp.takeHeal(35);
+                    }
+                    Debug.Log("Contact");
                 }
-                Debug.Log("Contact");
             }
             else if (collision.tag == "Killable")
             {
