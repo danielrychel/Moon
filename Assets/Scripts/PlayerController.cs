@@ -34,8 +34,7 @@ public class PlayerController : MonoBehaviour
 
     public Animator animator;
     private int time = 0;
-
-    private bool useMouse = true;
+    
     private Vector2 gunDir = new Vector2(1, 0);
 
 
@@ -65,12 +64,7 @@ public class PlayerController : MonoBehaviour
         // rotate gun
         if (!GameManager.instance.isStopped)
         {
-            if(Input.GetAxis("Mouse X") != 0.0f || Input.GetAxis("Mouse Y") != 0.0f)
-                useMouse = true;
-            if(Input.GetAxis("Gun X") != 0.0f || Input.GetAxis("Gun Y") != 0.0f)
-                useMouse = false;
-
-            if(useMouse) {
+            if(GameManager.instance.useKeyboard) {
                 Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 gunDir = mouseWorld - gunPivot.position;
             }
