@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class level_end : MonoBehaviour
 {
     public Rigidbody2D rb2d;
     public Rigidbody2D player;
+    public GameObject tutorial;
+    public Image prompt;
+    public Sprite keyboard;
+    public Sprite joystick;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +32,15 @@ public class level_end : MonoBehaviour
             {
                 GameManager.instance.GetComponent<LevelManagement>().NextLevel();
             }
+            tutorial.SetActive(true);
         }
+        else {
+            tutorial.SetActive(false);
+        }
+
+        if(GameManager.instance.useKeyboard)
+            prompt.sprite = keyboard;
+        else
+            prompt.sprite = joystick;
     }
 }
