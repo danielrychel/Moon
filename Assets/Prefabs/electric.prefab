@@ -388,3 +388,4 @@ MonoBehaviour:
   door: {fileID: 8078726684708830898}
   tutorial: {fileID: 1868902226}
   range: 3
+  tut: {fileID: 490365365}
