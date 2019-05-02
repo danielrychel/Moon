@@ -42,7 +42,7 @@ public class LevelManagement : MonoBehaviour
     }
 
     public void NextLevel() {
-        currentLevel++;
+        currentLevel = (currentLevel + 1) % levels.Length;
         SceneManager.LoadScene(levels[currentLevel]);
         //if(currentLevel == 2)
         //{

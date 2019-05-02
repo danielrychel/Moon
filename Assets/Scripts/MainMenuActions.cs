@@ -20,7 +20,7 @@ public class MainMenuActions : MonoBehaviour
     }
 
     public void StartGame() {
-        SceneManager.LoadScene("Level 1");
+        GameManager.instance.GetComponent<LevelManagement>().NextLevel();
     }
 
     public void OpenOptions() {

@@ -35,6 +35,9 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     private int time = 0;
 
+    private bool useMouse = true;
+    private Vector2 gunDir = new Vector2(1, 0);
+
 
     public enum ActState
     {
@@ -62,9 +65,22 @@ public class PlayerController : MonoBehaviour
         // rotate gun
         if (!GameManager.instance.isStopped)
         {
-            Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector2 mouseDelta = mouseWorld - gunPivot.position;
-            float angle = Mathf.Atan2(mouseDelta.y, mouseDelta.x);
+            if(Input.GetAxis("Mouse X") != 0.0f || Input.GetAxis("Mouse Y") != 0.0f)
+                useMouse = true;
+            if(Input.GetAxis("Gun X") != 0.0f || Input.GetAxis("Gun Y") != 0.0f)
+                useMouse = false;
+
+            if(useMouse) {
+                Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                gunDir = mouseWorld - gunPivot.position;
+            }
+            else {
+                if(Input.GetAxis("Gun X") != 0.0f || Input.GetAxis("Gun Y") != 0.0f) {
+                    gunDir = new Vector2(Input.GetAxis("Gun X"), Input.GetAxis("Gun Y"));
+                }
+            }
+
+            float angle = Mathf.Atan2(gunDir.y, gunDir.x);
             gunPivot.rotation = Quaternion.Euler(0, 0, angle * 180 / Mathf.PI);
 
             if(angle > 1.5 || angle < -1.5){
@@ -87,7 +103,7 @@ public class PlayerController : MonoBehaviour
             Vector3 camTarget = new Vector3(camDistance * Mathf.Cos(angle), camDistance * Mathf.Sin(angle), -10);
             cam.localPosition = Vector3.Lerp(cam.localPosition, camTarget, 0.1f);
             time++;
-            if (Input.GetButton("Fire1"))
+            if (Input.GetAxis("Fire1") > 0)
             {
                 switch(guns[currentGun]){
                     case "Pistol1":
@@ -127,21 +143,28 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.Q)){
+            int switchGun = currentGun;
+            if(Input.GetButtonDown("SwitchForward")) {
+                switchGun = (switchGun + 1) % guns.Length;
+            }
+            if(Input.GetButtonDown("SwitchBack")) {
+                switchGun = (switchGun + guns.Length - 1) % guns.Length;
+            }
 
-                currentGun = (currentGun + 1) % guns.Length; 
-                switch(guns[currentGun]){
-                    case "Pistol1":
-                        gunGameObject.GetComponent<Animator>().SetTrigger("ToPistol");
-                        gunGameObject.GetComponent<SpriteRenderer>().sprite = pistol;
-                        break;
-                    case "Shotgun1":
-                        gunGameObject.GetComponent<Animator>().SetTrigger("ToShotgun");
-                        gunGameObject.GetComponent<SpriteRenderer>().sprite = shotgun;
-                        break;
-                    default: 
-                        gunGameObject.GetComponent<SpriteRenderer>().sprite = pistol;
-                        break;
+            if(switchGun != currentGun) {
+                currentGun = switchGun;
+                switch(guns[currentGun]) {
+                case "Pistol1":
+                    gunGameObject.GetComponent<Animator>().SetTrigger("ToPistol");
+                    gunGameObject.GetComponent<SpriteRenderer>().sprite = pistol;
+                    break;
+                case "Shotgun1":
+                    gunGameObject.GetComponent<Animator>().SetTrigger("ToShotgun");
+                    gunGameObject.GetComponent<SpriteRenderer>().sprite = shotgun;
+                    break;
+                default:
+                    gunGameObject.GetComponent<SpriteRenderer>().sprite = pistol;
+                    break;
 
                 }
             }
@@ -201,7 +224,7 @@ public class PlayerController : MonoBehaviour
                 if (collision.gameObject.GetComponent<Health>().takeDamage(swordDmg))
                 {
                     dashLogic.setKilled();
-                    hp.takeHeal(2);
+                    hp.takeHeal(20);
                 }
                 Debug.Log("Contact");
             }

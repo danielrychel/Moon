@@ -23,7 +23,7 @@ public class level_end : MonoBehaviour
 
         if (distance <= 3)
         {
-            if (Input.GetKeyDown("e"))
+            if (Input.GetButtonDown("Use"))
             {
                 GameManager.instance.GetComponent<LevelManagement>().NextLevel();
             }
