@@ -3134,7 +3134,7 @@ MonoBehaviour:
   pistol: {fileID: 432646758}
   MGPivot: {fileID: 42127310}
   machineGun: {fileID: 1594479383}
-  drone: {fileID: 2991867501808357464, guid: 58bb4690722ede142862e9aaa20aa0eb, type: 3}
+  drone: {fileID: 8561059321059478618, guid: c3b18e0da52861241ab68357911e9369, type: 3}
   door: {fileID: 257066943}
   explosion: {fileID: 5082654568878365804, guid: 65a0d79748873e145836341579cc11fc,
     type: 3}
