@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MainMenuActions : MonoBehaviour
-{
+public class MainMenuActions : MonoBehaviour {
     public GameObject optionsMenu;
+    public GameObject controlsMenu;
+    public GameObject levelSelect;
 
     // Start is called before the first frame update
     void Start()
@@ -20,11 +21,17 @@ public class MainMenuActions : MonoBehaviour
     }
 
     public void StartGame() {
-        SceneManager.LoadScene("Level 1");
+        levelSelect.SetActive(true);
+        gameObject.SetActive(false);
     }
 
     public void OpenOptions() {
         optionsMenu.SetActive(true);
+        gameObject.SetActive(false);
+    }
+
+    public void OpenControls() {
+        controlsMenu.SetActive(true);
         gameObject.SetActive(false);
     }
 

@@ -34,7 +34,7 @@ public class DashAbility : MonoBehaviour
         switch (currentState)
         {
             case DashState.Ready:
-                if (Input.GetButtonDown("Dash"))
+                if (Input.GetAxis("Dash") > 0)
                 {
                     savedVelocity = rb2d.velocity;
                     dashing = true;
@@ -45,10 +45,10 @@ public class DashAbility : MonoBehaviour
                 dashTime += Time.deltaTime * 9;
                 if (!gotDir)
                 {
-//                    tempV = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
-                    Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    Vector2 vDir = mouseWorld - rb2d.transform.position;
-                    tempV = new Vector2(vDir.x, vDir.y);
+                    tempV = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+                    //Vector3 mouseWorld = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    //Vector2 vDir = mouseWorld - rb2d.transform.position;
+                    //tempV = new Vector2(vDir.x, vDir.y);
                     tempV.Normalize();
                     gotDir = true;
                 }
