@@ -14,6 +14,9 @@ TagManager:
   - PlayerAttack
   - death_ui
   - gun_ui
+  - Gun
+  - BossAttack
+  - Energy
   layers:
   - Default
   - TransparentFX

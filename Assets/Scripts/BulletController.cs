@@ -47,9 +47,13 @@ public class BulletController : MonoBehaviour
                 }
             }
             Destroy(transform.parent.gameObject);
-
         }
-        else if (collision.tag != "Killable" && transform.parent.tag == "EnemyAttack")
+        else if(transform.parent.tag == "Energy" && collision.tag == "Player")
+        {
+            collision.gameObject.GetComponent<Health>().takeDamage(dmg);
+            Destroy(transform.parent.gameObject);
+        }
+        else if (collision.tag != "Killable" && (transform.parent.tag == "EnemyAttack" || transform.parent.tag == "BossAttack") && collision.tag != "BossAttack")
         {
             if(collision.tag == "Player")
             {
