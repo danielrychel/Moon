@@ -21,7 +21,7 @@ public class door_control : MonoBehaviour
         if (getDistanceSqr() <= 9)
         {
             sprite.color = new Color(0.8f, 0.5f, 1f, 0.9f);
-            if (Input.GetKeyDown("e"))
+            if (Input.GetButtonDown("Use"))
             {
                 switched = true;
             }

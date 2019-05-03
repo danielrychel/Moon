@@ -12,6 +12,8 @@ public class GameManager : MonoBehaviour
     public bool isMenu;
     public GameObject player;
     [SerializeField] public int CombatCounter;
+    public bool useKeyboard;
+    public int tutorial;
 
     void Awake()
     {
@@ -24,6 +26,8 @@ public class GameManager : MonoBehaviour
         CombatCounter = 0;
         inCombat = false;
         isStopped = false;
+        useKeyboard = true;
+        tutorial = 0;
     }
     void Update()
     {
@@ -112,5 +116,49 @@ public class GameManager : MonoBehaviour
         if (MusicManager.MusicState.Menu == musicManager.current_music) return;
         musicManager.FadeMusic();
         musicManager.next_music = MusicManager.MusicState.Menu;
+    }
+
+    void OnGUI() {
+        if(useKeyboard) {
+            if(isControlerInput()) {
+                useKeyboard = false;
+                Debug.Log("Switched to controller");
+            }
+        }
+        else {
+            if(isMouseKeyboard()) {
+                useKeyboard = true;
+                Debug.Log("Switched to keyboard");
+            }
+        }
+    }
+
+    private bool isMouseKeyboard() {
+        // mouse & keyboard buttons
+        if(Event.current.isKey || Event.current.isMouse) {
+            return true;
+        }
+        // mouse movement
+        if(Input.GetAxis("Mouse X") != 0.0f || Input.GetAxis("Mouse Y") != 0.0f) {
+            return true;
+        }
+        return false;
+    }
+
+    private bool isControlerInput() {
+        // joystick buttons
+        for(KeyCode button = KeyCode.Joystick1Button0; button < KeyCode.Joystick1Button19; button++) {
+            if(Input.GetKey(button))
+                return true;
+        }
+
+        // joystick axis
+        if(Input.GetAxis("Gun X") != 0.0f || Input.GetAxis("Gun Y") != 0.0f ||
+           Input.GetAxis("Joy X") != 0.0f || Input.GetAxis("Joy Y") != 0.0f ||
+           Input.GetAxis("Joy TG") != 0.0f) {
+            return true;
+        }
+
+        return false;
     }
 }

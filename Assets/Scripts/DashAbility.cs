@@ -34,7 +34,7 @@ public class DashAbility : MonoBehaviour
         switch (currentState)
         {
             case DashState.Ready:
-                if (Input.GetButtonDown("Dash"))
+                if (Input.GetAxis("Dash") > 0)
                 {
                     savedVelocity = rb2d.velocity;
                     dashing = true;
