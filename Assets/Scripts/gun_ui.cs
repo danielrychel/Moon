@@ -10,7 +10,6 @@ public class gun_ui : MonoBehaviour
     public Image gun_image;
     public Sprite pistol;
     public Sprite shotgun;
-    public Sprite railgun;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +25,6 @@ public class gun_ui : MonoBehaviour
                 break;
             case "Shotgun1":
                 gun_image.sprite = shotgun;
-                break;
-            case "Railgun1":
-                gun_image.sprite = railgun;
                 break;
             default:
                 gun_image.sprite = pistol;
