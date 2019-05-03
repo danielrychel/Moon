@@ -56,8 +56,9 @@ public class Boss2Controller : MonoBehaviour
                     agroed = true;
                     if (first_door == false)
                     {
-                        Instantiate(wall, new Vector3(0, 25, 0), Quaternion.identity);
+                        Instantiate(wall, new Vector3(16.25f, 2.08f, 0), Quaternion.identity);
                         first_door = true;
+                        Debug.Log("wall!");
                     }
                 }
             }
