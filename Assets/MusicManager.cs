@@ -6,7 +6,7 @@ public class MusicManager : MonoBehaviour
 {
     public enum MusicState
     {
-        OutOfCombat, Combat, Eerie, Boss, Death, Idle, FadeMusic
+        OutOfCombat, Combat, Eerie, Boss, Death, Idle, FadeMusic, Menu
     }
 
     private bool musicInPlay;
@@ -15,6 +15,7 @@ public class MusicManager : MonoBehaviour
     public AudioClip[] OutOfCombatMusic;
     public AudioClip[] DeathMusic;
     public AudioClip[] BossMusic;
+    public AudioClip[] MenuMusic;
 
     public MusicState current_music;
     public MusicState next_music;
@@ -63,6 +64,13 @@ public class MusicManager : MonoBehaviour
                 if (!musicInPlay)
                 {
                     SoundManager.instance.PlayMusic(BossMusic[0]);
+                    musicInPlay = true;
+                }
+                break;
+            case MusicState.Menu:
+                if (!musicInPlay)
+                {
+                    SoundManager.instance.PlayMusic(MenuMusic[0]);
                     musicInPlay = true;
                 }
                 break;
